@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="QLBD.LichThiDau"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QLBD"
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="900"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <StackPanel Margin="0,10,0,0">
+            <ComboBox HorizontalAlignment="Center" Margin="282,0,338,0" Width="280">
+                <ComboBoxItem>
+                    Vòng bảng
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    Vòng 1/6
+                </ComboBoxItem>
+            </ComboBox>
+            <StackPanel Height="10"></StackPanel>
+            <TextBlock HorizontalAlignment="Center" Text="VÒNG BẢNG" FontSize="20" FontWeight="Bold"></TextBlock>
+            <StackPanel Height="10"></StackPanel>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="80,0,34,0" Width="786">
+                <StackPanel Width="27"></StackPanel>
+                <TextBlock Text="ID" Width="32"></TextBlock>
+                <StackPanel Width="82"></StackPanel>
+                <TextBlock Text="ĐỘI NHÀ"></TextBlock>
+                <StackPanel Width="106"></StackPanel>
+                <TextBlock Text="ĐỘI KHÁCH"></TextBlock>
+                <StackPanel Width="108"></StackPanel>
+                <TextBlock Text="THỜI GIAN"></TextBlock>
+                <StackPanel Width="79"></StackPanel>
+                <TextBlock Text="SÂN THI ĐẤU"></TextBlock>
+            </StackPanel>
+            <StackPanel Height="307"></StackPanel>
+            <StackPanel Height="20"></StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="262,0,137,0">
+                <Button Content="Load all rounds"></Button>
+                <StackPanel Width="100"></StackPanel>
+                <Button Content="General new fixtures"></Button>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

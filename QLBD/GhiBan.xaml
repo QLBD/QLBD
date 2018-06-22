@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="QLBD.GhiBan"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QLBD"
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="900"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <StackPanel Margin="0,10,0,0">
+            <StackPanel Orientation="Horizontal" Margin="97,0,72,0">
+                <TextBlock VerticalAlignment="Bottom" Text="Từ ngày:   "></TextBlock>
+                <TextBox Width="165"></TextBox>
+                <StackPanel Width="67"></StackPanel>
+                <TextBlock VerticalAlignment="Bottom" Text="Đến ngày:   "></TextBlock>
+                <TextBox Width="165"></TextBox>
+                <StackPanel Width="77"></StackPanel>
+                <Button Content="Xem danh sách"></Button>
+            </StackPanel>
+            <StackPanel Height=" 30"></StackPanel>
+            <DataGrid Height="332"></DataGrid>
+            <StackPanel Height="30"></StackPanel>
+            <Button Content="Xuất báo cáo" Margin="720,0,47,0"></Button>
+            
+        </StackPanel>
+    </Grid>
+</UserControl>

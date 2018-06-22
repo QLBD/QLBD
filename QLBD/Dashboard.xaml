@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="QLBD.Dashboard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QLBD"
+             mc:Ignorable="d" 
+             d:DesignHeight="525" d:DesignWidth="900"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid x:Name="gr_main" >
+        <Grid>
+            <TextBlock Text="Hello admin," FontSize="30" Foreground="Black" Margin="331,20,338.4,408.8" FontFamily=".Vnavant"></TextBlock>
+        </Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="801" Height="350" Margin="47,102,46.6,66.4">
+            <StackPanel Orientation="Horizontal" Height="175">
+                <Button x:Name="bt_doibong" Height="175" Width="267" Click="bt_doibong_Click" >
+                    <StackPanel Height="121" Width="240" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <materialDesign:PackIcon Kind="Soccer" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.513,3.438" Margin="10,0,0,0" Height="63" Width="230"/>
+                        <StackPanel Height="10"></StackPanel>
+                        <TextBlock Text="QL đội bóng" FontFamily="Arial" FontSize="20" Height="44" Width="112" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="bt_cauthu" Height="175" Width="267" Click="bt_cauthu_Click">
+                    <StackPanel Height="121" Width="240" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <materialDesign:PackIcon Kind="Account" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.513,3.438" Margin="10,0,0,0" Height="63" Width="230"/>
+                        <StackPanel Height="10"></StackPanel>
+                        <TextBlock Text="QL cầu thủ" FontFamily="Arial" FontSize="20" Height="44" Width="112" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="bt_lichthidau" Height="175" Width="267" Click="bt_lichthidau_Click">
+                    <StackPanel Height="121" Width="240" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <materialDesign:PackIcon Kind="Calendar" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.513,3.438" Margin="10,0,0,0" Height="63" Width="230"/>
+                        <StackPanel Height="10"></StackPanel>
+                        <TextBlock Text="Lịch thi đấu" FontFamily="Arial" FontSize="20" Height="44" Width="112" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="bt_banthang" Height="175" Width="267" Click="bt_banthang_Click">
+                    <StackPanel Height="121" Width="240" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <materialDesign:PackIcon Kind="SoccerField" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.513,3.438" Margin="10,0,0,0" Height="63" Width="230"/>
+                        <StackPanel Height="10"></StackPanel>
+                        <TextBlock Text="Kết quả thi đấu" FontFamily="Arial" FontSize="20" Height="44" Width="146" HorizontalAlignment="Center" Margin="52,0,42,0" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="bt_ghiban" Height="175" Width="267" Click="bt_ghiban_Click">
+                    <StackPanel Height="121" Width="240" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <materialDesign:PackIcon Kind="Star" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.513,3.438" Margin="10,0,0,0" Height="63" Width="230"/>
+                        <StackPanel Height="10"></StackPanel>
+                        <TextBlock Text="DS ghi bàn" FontFamily="Arial" FontSize="20" Height="44" Width="106" HorizontalAlignment="Center" Margin="77,0,57,0" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="bt_BXH" Height="175" Width="267" Click="bt_BXH_Click">
+                    <StackPanel Height="121" Width="240" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <materialDesign:PackIcon Kind="Table" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.513,3.438" Margin="10,0,0,0" Height="63" Width="230"/>
+                        <StackPanel Height="10"></StackPanel>
+                        <TextBlock Text="Bảng xếp hạng" FontFamily="Arial" FontSize="20" Height="44" Width="154" HorizontalAlignment="Center" Margin="60,0,26,0" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
