@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace QLBD.DAO
@@ -13,9 +10,9 @@ namespace QLBD.DAO
     {
         private DataProvider() { }
 
-        private static string connectionSTR = "Data Source=DESKTOP-77N15SE;Initial Catalog=QLBD;Integrated Security=True";
+        private static string connectionSTR = "Data Source=THAITHANG-PC;Initial Catalog=QLBD;Integrated Security=True";
 
-       
+
 
         public static bool TestConnectionSQL(string conn)
         {
