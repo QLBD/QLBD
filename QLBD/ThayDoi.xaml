@@ -20,7 +20,7 @@
             <StackPanel Height="10"></StackPanel>
             <TextBlock Text="Quy định hồ sơ tiếp nhận đội bóng:"></TextBlock>
             <StackPanel Height="10"></StackPanel>
-            <StackPanel Orientation="Horizontal" Height="151" Margin="0,0,0.4,0">
+            <StackPanel Orientation="Horizontal" Height="113" Margin="0,0,0.4,0">
                 <StackPanel Width="486" Height="156">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Độ tuổi cầu thủ:            Từ:   "></TextBlock>
@@ -42,11 +42,14 @@
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Width="183">
                         <TextBlock Text="Loại cầu thủ:"></TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Width="131"></TextBox>
+                        </StackPanel>
                         <ListView Height="135" Margin="0,0,0.2,0"></ListView>
                     </StackPanel>
                     <StackPanel Width="30"></StackPanel>
                     <StackPanel>
-                        <StackPanel Height="58"></StackPanel>
+                        <StackPanel Height="22"></StackPanel>
                         <Button >
                             <materialDesign:PackIcon  Kind="Plus"></materialDesign:PackIcon>
                         </Button>
@@ -58,7 +61,7 @@
                 </StackPanel>
             </StackPanel>
             <StackPanel Height="20"></StackPanel>
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" Height="196" Margin="0,0,0.4,0">
                 <StackPanel Width="261" >
                     <TextBlock Text="Quy định bàn thắng - xếp hạng:"></TextBlock>
                     <StackPanel Height="20"></StackPanel>
@@ -70,11 +73,12 @@
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="159">
                             <TextBlock Text="Loại bàn thắng:"></TextBlock>
+                            <StackPanel Height="10"></StackPanel>
                             <ListView Height="105" Margin="0,0,0.2,0"></ListView>
                         </StackPanel>
                         <StackPanel Width="38"></StackPanel>
                         <StackPanel>
-                            <StackPanel Height="38"></StackPanel>
+                            <StackPanel Height="27"></StackPanel>
                             <Button >
                                 <materialDesign:PackIcon  Kind="Plus"></materialDesign:PackIcon>
                             </Button>
@@ -105,6 +109,7 @@
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Width="159" Height="159">
                         <TextBlock Text="Thứ tự xếp hạng:"></TextBlock>
+                        <StackPanel Height="15"></StackPanel>
                         <ListView Height="142" Margin="0,0,0.2,0"></ListView>
                     </StackPanel>
                     <StackPanel Width="38"></StackPanel>
@@ -120,7 +125,12 @@
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
-
+            <StackPanel Height="20"></StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="276,0,0.4,0">
+                <Button Content="Cập nhật"></Button>
+                <StackPanel Width="30"></StackPanel>
+                <Button Content="Mặc định"></Button>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </UserControl>

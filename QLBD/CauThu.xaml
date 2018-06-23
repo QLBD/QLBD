@@ -23,8 +23,11 @@
                         <TextBlock VerticalAlignment="Bottom" Text="Mã CT:   "></TextBlock>
                         <TextBox Width="76"></TextBox>
                         <StackPanel Width="20"></StackPanel>
+                        <TextBlock VerticalAlignment="Bottom" Text="CLB:   "></TextBlock>
+                        <TextBox Width="76"></TextBox>
+                        <StackPanel Width="20"></StackPanel>
                         <TextBlock VerticalAlignment="Bottom" Text="Họ tên:    "></TextBlock>
-                        <TextBox Width="216"></TextBox>
+                        <TextBox Width="195"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Độ tuổi:    Từ   "></TextBlock>
@@ -34,14 +37,7 @@
                         <TextBox Width="40"></TextBox>
                         <StackPanel Width="25"></StackPanel>
                         <TextBlock VerticalAlignment="Bottom" Text="Quốc tịch:    "></TextBlock>
-                        <ComboBox Width="128">
-                            <ComboBoxItem>
-                                Việt Nam
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Thái Lan
-                            </ComboBoxItem>
-                        </ComboBox>
+                        <TextBox Width="99"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Tổng bàn thắng:    Từ   "></TextBlock>
@@ -51,7 +47,9 @@
                         <TextBox Width="40"></TextBox>
                     </StackPanel>
                     <StackPanel Height="20"></StackPanel>
-                    <Button VerticalAlignment="Bottom" Content="OK" Margin="451,0,27.6,0"></Button>
+                    <Button VerticalAlignment="Bottom" Margin="451,0,27.6,0">
+                        <materialDesign:PackIcon Kind="DatabaseSearch"></materialDesign:PackIcon>
+                    </Button>
                     <StackPanel Height="20"></StackPanel>
                     <DataGrid Height="283" Margin="0,0,-0.4,0"></DataGrid>
                 </StackPanel>

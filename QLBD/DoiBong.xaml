@@ -25,8 +25,11 @@
                         <TextBlock VerticalAlignment="Bottom" Text="Tên viết tắt:    "></TextBlock>
                         <TextBox Width="80"></TextBox>
                         <StackPanel Width="30"></StackPanel>
-                        <Button Content="OK"></Button>
+                        <Button>
+                            <materialDesign:PackIcon Kind="DatabaseSearch"></materialDesign:PackIcon>
+                        </Button>
                     </StackPanel>
+                    <StackPanel></StackPanel>
                     <DataGrid></DataGrid>
                 </StackPanel>
                 <StackPanel Width="18"></StackPanel>
@@ -38,25 +41,30 @@
                         <TextBlock VerticalAlignment="Bottom" Text="Mã CLB: "></TextBlock>
                         <TextBox Width="100"></TextBox>
                         <StackPanel Width="10"></StackPanel>
-                        <TextBlock VerticalAlignment="Bottom" Text="VT:  "></TextBlock>
+                        <TextBlock VerticalAlignment="Bottom" Text="Viết tắt:  "></TextBlock>
                         <TextBox Width="93" Margin="0,0,0,-0.2"></TextBox>
                     </StackPanel>
-                    <StackPanel Height="15"></StackPanel>
+                    <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Tên đội bóng:  "></TextBlock>
                         <TextBox Width="184"></TextBox>
                     </StackPanel>
-                    <StackPanel Height="15"></StackPanel>
+                    <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Năm thành lập:  "></TextBlock>
                         <TextBox Width="170"></TextBox>
                     </StackPanel>
-                    <StackPanel Height="15"></StackPanel>
+                    <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Sân nhà:    "></TextBlock>
                         <TextBox Width="188"></TextBox>
                     </StackPanel>
-                    <StackPanel Height="30" Margin="0,0,0.2,0"></StackPanel>
+                    <StackPanel Height="10"></StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Bottom" Text="Số lượng cầu thủ:    "></TextBlock>
+                        <TextBox Width="188"></TextBox>
+                    </StackPanel>
+                    <StackPanel Height="20" Margin="0,0,0.2,0"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="15"></StackPanel>
                         <Button Content="Add"></Button>
