@@ -27,7 +27,10 @@
                         <StackPanel Width="30"></StackPanel>
                         <Button Content="OK"></Button>
                     </StackPanel>
-                    <DataGrid></DataGrid>
+                    <StackPanel Height="48" Margin="0,0,-0.2,0"></StackPanel>
+                    <DataGrid x:Name="dgClub" Height="342" Margin="0,0,-0.2,0" SelectionChanged="dgClub_SelectionChanged" IsReadOnly="True"
+                              SelectionMode="Single" SelectionUnit="FullRow">
+                    </DataGrid>
                 </StackPanel>
                 <StackPanel Width="18"></StackPanel>
                 <StackPanel Margin="0,0,0,-0.2" Width="299">
@@ -36,25 +39,25 @@
                     <StackPanel Height="40"></StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,0,9.8,0" Height="33">
                         <TextBlock VerticalAlignment="Bottom" Text="Mã CLB: "></TextBlock>
-                        <TextBox Width="100"></TextBox>
+                        <TextBox x:Name="tbClubID" Width="100"/>
                         <StackPanel Width="10"></StackPanel>
                         <TextBlock VerticalAlignment="Bottom" Text="VT:  "></TextBlock>
-                        <TextBox Width="93" Margin="0,0,0,-0.2"></TextBox>
+                        <TextBox x:Name="tbShortName" Width="93" Margin="0,0,0,-0.2"></TextBox>
                     </StackPanel>
                     <StackPanel Height="15"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Tên đội bóng:  "></TextBlock>
-                        <TextBox Width="184"></TextBox>
+                        <TextBox x:Name="tbClubName" Width="184"></TextBox>
                     </StackPanel>
                     <StackPanel Height="15"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Năm thành lập:  "></TextBlock>
-                        <TextBox Width="170"></TextBox>
+                        <TextBox x:Name="tbEstablishYear" Width="170"></TextBox>
                     </StackPanel>
                     <StackPanel Height="15"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Sân nhà:    "></TextBlock>
-                        <TextBox Width="188"></TextBox>
+                        <TextBox x:Name="tbHomeField" Width="188"></TextBox>
                     </StackPanel>
                     <StackPanel Height="30" Margin="0,0,0.2,0"></StackPanel>
                     <StackPanel Orientation="Horizontal">

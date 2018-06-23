@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 using System.Data;
+using QLBD.DAO;
+using QLBD.DTO;
 
 namespace QLBD
 {
@@ -25,14 +27,27 @@ namespace QLBD
         public DoiBong()
         {
             InitializeComponent();
-            //SqlConnection connect = new SqlConnection(@"Data Source=..\..\Database\QuanLyVDQG.sql; Initial Catalog=Pubs");
-            //SqlCommand adapter = new SqlCommand("Select * from CLUB", connect);
-            //SqlDataAdapter data = new SqlDataAdapter(adapter);
-            //DataTable dt = new DataTable();
-            //data.Fill(dt);
-            //dg_doibong.ItemsSource = dt.DefaultView;
-            
+            LoadListClub();
+        }
 
+        private void LoadListClub()
+        {
+            dgClub.ItemsSource = ClubDAO.GetAllListClub().DefaultView;
+            dgClub.SelectedIndex = 0;
+        }
+
+        private void dgClub_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(dgClub.SelectedIndex > -1)
+            {
+                DataRowView dataRow = dgClub.SelectedItem as DataRowView;
+                if (dataRow == null) return;
+                tbClubID.Text = dataRow[0].ToString();
+                tbShortName.Text = dataRow[1].ToString();
+                tbClubName.Text = dataRow[2].ToString();
+                tbEstablishYear.Text = dataRow[3].ToString();
+                tbHomeField.Text = dataRow[4].ToString();
+            }
         }
     }
 
