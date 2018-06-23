@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLBD.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,12 @@ namespace QLBD
     /// </summary>
     public partial class Dashboard : UserControl
     {
-        public Dashboard()
+        private Account LoginAccount;
+        public Dashboard(Account account)
         {
             InitializeComponent();
+            LoginAccount = account;
+            tbNameAccount.Text = account.DisplayName;
         }
 
         private void bt_doibong_Click(object sender, RoutedEventArgs e)

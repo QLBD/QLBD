@@ -15,9 +15,9 @@
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid x:Name="gr_main" >
-        <Grid>
-            <TextBlock Text="Hello admin," FontSize="30" Foreground="Black" Margin="331,20,338.4,408.8" FontFamily=".Vnavant"></TextBlock>
-        </Grid>
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Center" x:Name="tbNameAccount" FontSize="30" Foreground="Black" Margin="10,20,0,408.8" FontFamily=".Vnavant"></TextBlock>
+        </StackPanel>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="801" Height="350" Margin="47,102,46.6,66.4">
             <StackPanel Orientation="Horizontal" Height="175">
                 <Button x:Name="bt_doibong" Height="175" Width="267" Click="bt_doibong_Click" >

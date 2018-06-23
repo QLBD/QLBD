@@ -61,7 +61,7 @@ namespace QLBD.DAO
 
         public static Account GetAccountByUserName(string userName)
         {
-            DataTable data = DataProvider.ExecuteQuery("Select * from TaiKhoan where userName = '" + userName + "'");
+            DataTable data = DataProvider.ExecuteQuery("Select * from ACCOUNT where USERNAME = '" + userName + "'");
 
             foreach (DataRow row in data.Rows)
             {

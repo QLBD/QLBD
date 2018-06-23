@@ -25,12 +25,12 @@ namespace QLBD
         public DoiBong()
         {
             InitializeComponent();
-            SqlConnection connect = new SqlConnection(@"Data Source=..\..\Database\QuanLyVDQG.sql; Initial Catalog=Pubs");
-            SqlCommand adapter = new SqlCommand("Select * from CLUB", connect);
-            SqlDataAdapter data = new SqlDataAdapter(adapter);
-            DataTable dt = new DataTable();
-            data.Fill(dt);
-            dg_doibong.ItemsSource = dt.DefaultView;
+            //SqlConnection connect = new SqlConnection(@"Data Source=..\..\Database\QuanLyVDQG.sql; Initial Catalog=Pubs");
+            //SqlCommand adapter = new SqlCommand("Select * from CLUB", connect);
+            //SqlDataAdapter data = new SqlDataAdapter(adapter);
+            //DataTable dt = new DataTable();
+            //data.Fill(dt);
+            //dg_doibong.ItemsSource = dt.DefaultView;
             
 
         }

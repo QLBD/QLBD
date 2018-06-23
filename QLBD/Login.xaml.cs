@@ -1,4 +1,5 @@
 ﻿using QLBD.DAO;
+using QLBD.DTO;
 using System;
 using System.Linq;
 using System.Windows;
@@ -34,7 +35,8 @@ namespace QLBD
             int result = LoginAccount(userName, passWord);
             if (result == 1)
             {
-                MainWindow mwindow = new MainWindow();
+                Account loginAccount = AccountDAO.GetAccountByUserName(userName);
+                MainWindow mwindow = new MainWindow(loginAccount);
                 this.Hide();
                 mwindow.ShowDialog();
                 this.Show();

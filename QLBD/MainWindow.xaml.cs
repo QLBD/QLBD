@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLBD.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,12 +21,16 @@ namespace QLBD
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private Account account;
+
+        public MainWindow(Account loginAccount)
         {
             InitializeComponent();
-            Dashboard dboard1 = new Dashboard();
+
+            account = loginAccount;
+
+            Dashboard dboard1 = new Dashboard(account);
             gr_main.Children.Add(dboard1);
-            
         }
 
         private void bt_close_Click(object sender, RoutedEventArgs e)
@@ -45,7 +50,7 @@ namespace QLBD
         }
         private void bt_main_Click(object sender, RoutedEventArgs e)
         {
-            Dashboard dboard2 = new Dashboard();
+            Dashboard dboard2 = new Dashboard(account);
             gr_main.Children.Clear();
             gr_main.Children.Add(dboard2);
         }
