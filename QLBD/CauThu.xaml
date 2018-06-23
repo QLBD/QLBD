@@ -15,34 +15,47 @@
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
-        <StackPanel>
-            <StackPanel Height="10"></StackPanel>
+        <StackPanel Margin="10">
             <StackPanel Orientation="Horizontal">
-                <StackPanel Margin="0,0,0,-0.2" Width="564">
+                <StackPanel Margin="0,0,0,-0.2" Width="538">
                     <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
-                    <StackPanel Width="20"></StackPanel>
-                    <ComboBox SelectedIndex="0" Width="172">
+                        <TextBlock VerticalAlignment="Bottom" Text="Mã CT:   "></TextBlock>
+                        <TextBox Width="76"></TextBox>
+                        <StackPanel Width="20"></StackPanel>
+                        <TextBlock VerticalAlignment="Bottom" Text="Họ tên:    "></TextBlock>
+                        <TextBox Width="216"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Bottom" Text="Độ tuổi:    Từ   "></TextBlock>
+                        <TextBox Width="40"></TextBox>
+                        <StackPanel Width="25"></StackPanel>
+                        <TextBlock Text="Đến:   " VerticalAlignment="Bottom"></TextBlock>
+                        <TextBox Width="40"></TextBox>
+                        <StackPanel Width="25"></StackPanel>
+                        <TextBlock VerticalAlignment="Bottom" Text="Quốc tịch:    "></TextBlock>
+                        <ComboBox Width="128">
                             <ComboBoxItem>
-                                SLNA
+                                Việt Nam
                             </ComboBoxItem>
                             <ComboBoxItem>
-                               HAGL
+                                Thái Lan
                             </ComboBoxItem>
-                    </ComboBox>
-                    <StackPanel Width="20"></StackPanel>
-                        <Button Content="OK"/>
+                        </ComboBox>
                     </StackPanel>
-                    <StackPanel Height="10"></StackPanel>
-                    
-                    <StackPanel Height="10"></StackPanel>
-                    
-                    <StackPanel Height="10"></StackPanel>
-                    <StackPanel>
-                        <DataGrid></DataGrid>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Bottom" Text="Tổng bàn thắng:    Từ   "></TextBlock>
+                        <TextBox Width="40"></TextBox>
+                        <StackPanel Width="25"></StackPanel>
+                        <TextBlock Text="Đến:   " VerticalAlignment="Bottom"></TextBlock>
+                        <TextBox Width="40"></TextBox>
                     </StackPanel>
+                    <StackPanel Height="20"></StackPanel>
+                    <Button VerticalAlignment="Bottom" Content="OK" Margin="451,0,27.6,0"></Button>
+                    <StackPanel Height="20"></StackPanel>
+                    <DataGrid Height="283" Margin="0,0,-0.4,0"></DataGrid>
                 </StackPanel>
-                <StackPanel Width="10"></StackPanel>
+                <StackPanel Width="28"></StackPanel>
                 <StackPanel Margin="0,0,0,-0.2" Width="313">
                     <Image Height="163" Margin="0,0,-0.2,0" Source="02.png"></Image>
                     <StackPanel Orientation="Horizontal">
@@ -89,7 +102,7 @@
                         <TextBlock VerticalAlignment="Bottom" Text="Tổng số bàn thắng:   "></TextBlock>
                         <TextBox Width="161"></TextBox>
                     </StackPanel>
-                    <StackPanel Height="25"></StackPanel>
+                    <StackPanel Height="17" Margin="0,0,-0.2,0"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="18"></StackPanel>
                         <Button Content="Add"></Button>
@@ -97,7 +110,7 @@
                         <Button Content="Update"></Button>
                         <StackPanel Width="28"></StackPanel>
                         <Button Content="Delete" Width="92"></Button>
-                        
+
                     </StackPanel>
                 </StackPanel>
             </StackPanel>

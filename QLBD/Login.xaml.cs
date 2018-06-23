@@ -31,7 +31,7 @@ namespace QLBD
         {
             btn_Login.IsEnabled = false;
             string userName = tb_username.Text;
-            string passWord = tb_password.ToString();
+            string passWord = tb_password.Password;
             int result = LoginAccount(userName, passWord);
             if (result == 1)
             {

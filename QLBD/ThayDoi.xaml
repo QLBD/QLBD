@@ -15,9 +15,112 @@
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
-        <StackPanel Margin="0,10,0,0">
+        <StackPanel Margin="23,10">
             <TextBlock Text="THAY ĐỔI QUY ĐỊNH:" HorizontalAlignment="Center" FontSize="30" FontFamily="Arial"></TextBlock>
-            
+            <StackPanel Height="10"></StackPanel>
+            <TextBlock Text="Quy định hồ sơ tiếp nhận đội bóng:"></TextBlock>
+            <StackPanel Height="10"></StackPanel>
+            <StackPanel Orientation="Horizontal" Height="151" Margin="0,0,0.4,0">
+                <StackPanel Width="486" Height="156">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Bottom" Text="Độ tuổi cầu thủ:            Từ:   "></TextBlock>
+                        <TextBox Width="73"></TextBox>
+                        <TextBlock VerticalAlignment="Bottom" Text="Đến:    "></TextBlock>
+                        <TextBox Width="90"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Bottom" Text="Số lượng cầu thủ:          Từ:  "></TextBlock>
+                        <TextBox Width="73"></TextBox>
+                        <TextBlock VerticalAlignment="Bottom" Text="Đến:  "></TextBlock>
+                        <TextBox Width="90"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Bottom" Text="Số cầu thủ nước ngoài tối đa:        "></TextBlock>
+                        <TextBox Width="87"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Width="183">
+                        <TextBlock Text="Loại cầu thủ:"></TextBlock>
+                        <ListView Height="135" Margin="0,0,0.2,0"></ListView>
+                    </StackPanel>
+                    <StackPanel Width="30"></StackPanel>
+                    <StackPanel>
+                        <StackPanel Height="58"></StackPanel>
+                        <Button >
+                            <materialDesign:PackIcon  Kind="Plus"></materialDesign:PackIcon>
+                        </Button>
+                        <StackPanel Height="20"></StackPanel>
+                        <Button>
+                            <materialDesign:PackIcon Kind="Cancel"></materialDesign:PackIcon>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Height="20"></StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Width="261" >
+                    <TextBlock Text="Quy định bàn thắng - xếp hạng:"></TextBlock>
+                    <StackPanel Height="20"></StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Thời điểm ghi bàn tối đa:  "></TextBlock>
+                        <TextBox Width="50"></TextBox>
+                    </StackPanel>
+                    <StackPanel Height="20"></StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Width="159">
+                            <TextBlock Text="Loại bàn thắng:"></TextBlock>
+                            <ListView Height="105" Margin="0,0,0.2,0"></ListView>
+                        </StackPanel>
+                        <StackPanel Width="38"></StackPanel>
+                        <StackPanel>
+                            <StackPanel Height="38"></StackPanel>
+                            <Button >
+                                <materialDesign:PackIcon  Kind="Plus"></materialDesign:PackIcon>
+                            </Button>
+                            <StackPanel Height="20"></StackPanel>
+                            <Button>
+                                <materialDesign:PackIcon Kind="Cancel"></materialDesign:PackIcon>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Width="38"></StackPanel>
+                <StackPanel>
+                    <StackPanel Height="48" ></StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Bottom" Text="Điểm thắng:   "></TextBlock>
+                        <TextBox Width="43"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Bottom" Text="Điểm hòa:      "></TextBlock>
+                        <TextBox Width="43"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Bottom" Text="Điểm thua:     "></TextBlock>
+                        <TextBox Width="43"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Width="83"></StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Width="159" Height="159">
+                        <TextBlock Text="Thứ tự xếp hạng:"></TextBlock>
+                        <ListView Height="142" Margin="0,0,0.2,0"></ListView>
+                    </StackPanel>
+                    <StackPanel Width="38"></StackPanel>
+                    <StackPanel>
+                        <StackPanel Height="81"></StackPanel>
+                        <Button >
+                            <materialDesign:PackIcon  Kind="ArrowUp"></materialDesign:PackIcon>
+                        </Button>
+                        <StackPanel Height="20"></StackPanel>
+                        <Button>
+                            <materialDesign:PackIcon Kind="ArrowDown"></materialDesign:PackIcon>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
         </StackPanel>
     </Grid>
 </UserControl>
