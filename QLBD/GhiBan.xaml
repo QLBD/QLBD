@@ -26,7 +26,7 @@
                 <Button x:Name="btnShowList"  Content="Xem danh sách" Click="btnShowList_Click"></Button>
             </StackPanel>
             <StackPanel Height=" 30"></StackPanel>
-            <DataGrid x:Name="dgListGoalByPlayer" Height="332" 
+            <DataGrid x:Name="dgListGoalByPlayer" Height="315" 
                       IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow" ColumnWidth="*" IsHitTestVisible="False">
             </DataGrid>
             <StackPanel Height="30"></StackPanel>

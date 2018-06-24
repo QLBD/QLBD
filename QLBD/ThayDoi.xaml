@@ -39,30 +39,10 @@
                         <TextBox x:Name="tbMaxForeignPlayer" Width="87"></TextBox>
                     </StackPanel>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <StackPanel Width="183">
-                        <TextBlock Text="Loại cầu thủ:"></TextBlock>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBox Width="131"></TextBox>
-                        </StackPanel>
-                        <ListView Height="135" Margin="0,0,0.2,0"></ListView>
-                    </StackPanel>
-                    <StackPanel Width="30"></StackPanel>
-                    <StackPanel>
-                        <StackPanel Height="22"></StackPanel>
-                        <Button >
-                            <materialDesign:PackIcon  Kind="Plus"></materialDesign:PackIcon>
-                        </Button>
-                        <StackPanel Height="20"></StackPanel>
-                        <Button>
-                            <materialDesign:PackIcon Kind="Cancel"></materialDesign:PackIcon>
-                        </Button>
-                    </StackPanel>
-                </StackPanel>
             </StackPanel>
             <StackPanel Height="20"></StackPanel>
             <StackPanel Orientation="Horizontal" Height="196" Margin="0,0,0.4,0">
-                <StackPanel Width="261" >
+                <StackPanel Width="378" >
                     <TextBlock Text="Quy định bàn thắng - xếp hạng:"></TextBlock>
                     <StackPanel Height="20"></StackPanel>
                     <StackPanel Orientation="Horizontal">
@@ -71,7 +51,7 @@
                     </StackPanel>
                     <StackPanel Height="20"></StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <StackPanel Width="159">
+                        <StackPanel Width="244">
                             <TextBlock Text="Loại bàn thắng:"></TextBlock>
                             <StackPanel Height="10"></StackPanel>
                             <ListView x:Name="lvGoalType" Height="105" Margin="0,0,0.2,0"></ListView>
@@ -89,7 +69,7 @@
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
-                <StackPanel Width="38"></StackPanel>
+                <StackPanel Width="133"></StackPanel>
                 <StackPanel>
                     <StackPanel Height="48" ></StackPanel>
                     <StackPanel Orientation="Horizontal">
@@ -106,29 +86,11 @@
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Width="83"></StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <StackPanel Width="159" Height="159">
-                        <TextBlock Text="Thứ tự xếp hạng:"></TextBlock>
-                        <StackPanel Height="15"></StackPanel>
-                        <ListView Height="142" Margin="0,0,0.2,0"></ListView>
-                    </StackPanel>
-                    <StackPanel Width="38"></StackPanel>
-                    <StackPanel>
-                        <StackPanel Height="81"></StackPanel>
-                        <Button >
-                            <materialDesign:PackIcon  Kind="ArrowUp"></materialDesign:PackIcon>
-                        </Button>
-                        <StackPanel Height="20"></StackPanel>
-                        <Button>
-                            <materialDesign:PackIcon Kind="ArrowDown"></materialDesign:PackIcon>
-                        </Button>
-                    </StackPanel>
-                </StackPanel>
             </StackPanel>
             <StackPanel Height="20"></StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="276,0,0.4,0">
+            <StackPanel Orientation="Horizontal" Margin="539,0,0.4,0">
                 <Button Content="Cập nhật"></Button>
-                <StackPanel Width="30"></StackPanel>
+                <StackPanel Width="74"/>
                 <Button Content="Mặc định"></Button>
             </StackPanel>
         </StackPanel>

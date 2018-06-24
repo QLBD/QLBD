@@ -67,12 +67,12 @@
                 </DataGrid>
                 <StackPanel Height="15" Margin="0,0,0.2,0"></StackPanel>
                 <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Bottom" Text="Mã bàn thắng:  "></TextBlock>
+                    <TextBox x:Name="tbGoalID" Width="123" IsReadOnly="True"></TextBox>
+                    <StackPanel Width="46"></StackPanel>
                     <TextBlock VerticalAlignment="Bottom" Text="Đội ghi bàn:  "></TextBlock>
                     <ComboBox x:Name="cboClub" Width="163" SelectionChanged="cboClub_SelectionChanged">
                     </ComboBox>
-                        <StackPanel Width="20"></StackPanel>
-                    <TextBlock VerticalAlignment="Bottom" Text="Mã bàn thắng:  "></TextBlock>
-                    <TextBox x:Name="tbGoalID" Width="66" IsReadOnly="True"></TextBox>
                 </StackPanel>
                 <StackPanel Height="15" Margin="0,0,0.2,0"></StackPanel>
                 <StackPanel Orientation="Horizontal">
@@ -80,15 +80,12 @@
                     <ComboBox x:Name="cboPlayer" Width="138">
                     </ComboBox>
                     <StackPanel Width="20"></StackPanel>
-                    <TextBlock Text="Mã trận đấu:  " VerticalAlignment="Bottom"></TextBlock>
-                    <ComboBox x:Name="cboMatchID" Width="175"></ComboBox>
-                </StackPanel>
-                <StackPanel Height="15" Margin="0,0,0.2,0"></StackPanel>
-                <StackPanel Orientation="Horizontal">
                     <TextBlock VerticalAlignment="Bottom" Text="Loại BT:  "></TextBlock>
                     <ComboBox x:Name="cboGoalType" Width="152">
                     </ComboBox>
-                    <StackPanel Width="55"></StackPanel>
+                </StackPanel>
+                <StackPanel Height="15" Margin="0,0,0.2,0"></StackPanel>
+                <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Phút ghi bàn:  " VerticalAlignment="Bottom"></TextBlock>
                     <TextBox x:Name="tboGoalTime" Width="115" ></TextBox>
                 </StackPanel>

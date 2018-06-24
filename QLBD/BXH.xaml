@@ -16,13 +16,9 @@
      FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
         <StackPanel Margin="0,10,0,0">
-            <StackPanel  Orientation="Horizontal" Margin="290,0,0,0">
-                <TextBlock VerticalAlignment="Bottom" Text="Ngày:   "></TextBlock>
-                <DatePicker x:Name ="dpDateSelection" VerticalAlignment="Bottom" Width="159" SelectedDateChanged="dpDateSelection_SelectedDateChanged"></DatePicker>
-                <StackPanel Width="30"></StackPanel>
-            </StackPanel>
+            <TextBlock TextAlignment="Center" Text="BẢNG XẾP HẠNG" FontSize="25" Width="430" FontWeight="Bold"></TextBlock>
             <StackPanel Height="20"></StackPanel>
-            <DataGrid x:Name="dgCharts" Height="345"></DataGrid>
+            <DataGrid x:Name="dgCharts" Height="332"></DataGrid>
             <StackPanel Height="20"></StackPanel>
             <Button Content="Xuất báo cáo" Margin="727,0,37,0"></Button>
         </StackPanel>
