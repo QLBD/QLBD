@@ -36,8 +36,8 @@
                         <TextBlock Text="Đến:   " VerticalAlignment="Bottom"></TextBlock>
                         <TextBox Width="40"></TextBox>
                         <StackPanel Width="25"></StackPanel>
-                        <TextBlock VerticalAlignment="Bottom" Text="Quốc tịch:    "></TextBlock>
-                        <TextBox Width="99"></TextBox>
+                        <TextBlock VerticalAlignment="Bottom" Text="Loại cầu thủ:    "></TextBlock>
+                        <ComboBox Width="122"></ComboBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Tổng bàn thắng:    Từ   "></TextBlock>

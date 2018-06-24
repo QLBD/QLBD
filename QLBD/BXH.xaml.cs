@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLBD.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,12 +24,16 @@ namespace QLBD
         public BXH()
         {
             InitializeComponent();
-            dpDateSelection.SelectedDate = DateTime.Now;
+            LoadChart();
         }
 
-        private void dpDateSelection_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        private void LoadChart()
         {
-
+            string query = "select rank() OVER (ORDER BY POINT, (GOALSFOR - GOALSAGAINST),CLUBNAME) as Pos, CLUBNAME as Team, MATCHPLAY as Pld, WIN as W, LOSE as L, DRAW as D, GOALSFOR as GS, GOALSAGAINST as GA, GOALDIFFERENCE as GD, POINT as P "
+                + " from CHARTS ch, CLUB cl "
+                + " where ch.CLUBID = cl.CLUBID "
+                + " ORDER BY Pos ";
+            dgCharts.ItemsSource = DataProvider.ExecuteQuery(query).DefaultView;
         }
     }
 }

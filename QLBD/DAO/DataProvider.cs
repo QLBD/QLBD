@@ -10,7 +10,7 @@ namespace QLBD.DAO
     {
         private DataProvider() { }
 
-        private static string connectionSTR = "Data Source=THAITHANG-PC;Initial Catalog=QLBD;Integrated Security=True";
+        private static string connectionSTR = Properties.Settings.Default.connectionSTR;
 
 
 

@@ -107,6 +107,12 @@ namespace QLBD
                 MessageBox.Show("XÓA CÂU LẠC BỘ THẤT BẠI", "THÔNG BÁO");
             }
         }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            string clubName= tbClubNameSearch.Text;
+            dgClub.ItemsSource = ClubDAO.SearchClubByName(clubName).DefaultView;
+        }
     }
 
 }

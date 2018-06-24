@@ -19,13 +19,10 @@
             <StackPanel Orientation="Horizontal">
                 <StackPanel Width="553">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock VerticalAlignment="Bottom" Text="Mã CLB:    "></TextBlock>
-                        <TextBox Width="80"></TextBox>
+                        <TextBox x:Name="tbClubNameSearch" Margin="0,10" materialDesign:HintAssist.Hint="Nhập tên đội bóng cần tìm kiếm" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                                 TextAlignment="Center" FontFamily="Champagne &amp; Limousines" FontSize="18" Width="294" Height="41"/>
                         <StackPanel Width="30"></StackPanel>
-                        <TextBlock VerticalAlignment="Bottom" Text="Tên viết tắt:    "></TextBlock>
-                        <TextBox Width="80"></TextBox>
-                        <StackPanel Width="30"></StackPanel>
-                        <Button>
+                        <Button x:Name="btnSearch" Click="btnSearch_Click">
                             <materialDesign:PackIcon Kind="DatabaseSearch"></materialDesign:PackIcon>
                         </Button>
                     </StackPanel>

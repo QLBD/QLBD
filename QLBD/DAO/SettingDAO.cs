@@ -15,5 +15,11 @@ namespace QLBD.DAO
             DataTable data = DataProvider.ExecuteQuery("select * from PARAMETER");
             return new Setting(data.Rows[0]);
         }
+        public static bool UpdateParameterSetting(int MinAge, int MaxAge, int MinPlayer, int MaxPlayer, int MaxForeignPlayer, int MaxGoalTime, int WinScore, int LoseScore, int DrawScore)
+        {
+            string query = "UPDATE_PARAMETER @MINAGE , @MAXAGE , @MINPLAYER , @MAXPLAYER , @MAXFOREIGNPLAYER , @MAXGOALTIME , @WINSCORE , @LOSESCORE , @DRAWSCORE ";
+            int result = DataProvider.ExecuteNonQuery(query, new object[] { MinAge, MaxAge, MinPlayer, MaxPlayer, MaxForeignPlayer, MaxGoalTime, WinScore, LoseScore, DrawScore });
+            return result > 0;
+        }
     }
 }

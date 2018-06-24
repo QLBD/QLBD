@@ -56,17 +56,6 @@
                             <StackPanel Height="10"></StackPanel>
                             <ListView x:Name="lvGoalType" Height="105" Margin="0,0,0.2,0"></ListView>
                         </StackPanel>
-                        <StackPanel Width="38"></StackPanel>
-                        <StackPanel>
-                            <StackPanel Height="27"></StackPanel>
-                            <Button >
-                                <materialDesign:PackIcon  Kind="Plus"></materialDesign:PackIcon>
-                            </Button>
-                            <StackPanel Height="20"></StackPanel>
-                            <Button>
-                                <materialDesign:PackIcon Kind="Cancel"></materialDesign:PackIcon>
-                            </Button>
-                        </StackPanel>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Width="133"></StackPanel>
@@ -89,9 +78,9 @@
             </StackPanel>
             <StackPanel Height="20"></StackPanel>
             <StackPanel Orientation="Horizontal" Margin="539,0,0.4,0">
-                <Button Content="Cập nhật"></Button>
+                <Button x:Name="btnUpdate" Content="Cập nhật" Click="btnUpdate_Click"></Button>
                 <StackPanel Width="74"/>
-                <Button Content="Mặc định"></Button>
+                <Button x:Name="btnDefault"  Content="Mặc định" Click="btnDefault_Click"></Button>
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -112,8 +112,8 @@
     <Compile Include="DTO\Player.cs" />
     <Compile Include="DTO\Round.cs" />
     <Compile Include="DTO\Setting.cs" />
-    <Compile Include="ReportGoal.xaml.cs">
-      <DependentUpon>ReportGoal.xaml</DependentUpon>
+    <Compile Include="KetNoi.xaml.cs">
+      <DependentUpon>KetNoi.xaml</DependentUpon>
     </Compile>
     <Compile Include="ThayDoi.xaml.cs">
       <DependentUpon>ThayDoi.xaml</DependentUpon>
@@ -139,6 +139,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GhiBan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KetNoi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -186,10 +190,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ReportGoal.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ThayDoi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -213,6 +213,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

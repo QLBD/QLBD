@@ -37,9 +37,8 @@ namespace QLBD
             {
                 Account loginAccount = AccountDAO.GetAccountByUserName(userName);
                 MainWindow mwindow = new MainWindow(loginAccount);
-                this.Hide();
-                mwindow.ShowDialog();
-                this.Show();
+                mwindow.Show();
+                this.Close();
             }
             else if (result == 0)
             {
@@ -55,6 +54,14 @@ namespace QLBD
         private int LoginAccount(string userName, string passWord)
         {
             return AccountDAO.Login(userName, passWord);
+        }
+
+        private void btn_Setting_Click(object sender, RoutedEventArgs e)
+        {
+            KetNoi ketNoi = new KetNoi();
+            this.Hide();
+            ketNoi.ShowDialog();
+            this.Show();
         }
     }
 }

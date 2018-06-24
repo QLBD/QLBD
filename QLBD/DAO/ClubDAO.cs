@@ -56,5 +56,9 @@ namespace QLBD.DAO
             int result = DataProvider.ExecuteNonQuery("DELETE CLUB WHERE CLUBID = '" + clubID + "'");
             return result > 0;
         }
+        public static DataTable SearchClubByName(string name)
+        {
+            return DataProvider.ExecuteQuery("SEARCH_CLUB @CLUBNAME ", new object[] { name });
+        }
     }
 }
