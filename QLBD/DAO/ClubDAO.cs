@@ -1,5 +1,6 @@
 ﻿using QLBD.DTO;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
@@ -24,6 +25,19 @@ namespace QLBD.DAO
             DataTable data = DataProvider.ExecuteQuery(query);
             Club club = new Club(data.Rows[0]);
             return club;
+        }
+        public static List<Club> GetPlayerByClubMatchID(int matchID)
+        {
+            List<Club> listClub = new List<Club>();
+            DataTable data = DataProvider.ExecuteQuery("select c.CLUBID, CLUBNAME, CLUBSHORTNAME, ESTABLISHEDYEAR, HOMEFIELD " +
+                "from MATCH m, CLUB c " +
+                "where(m.HOMECLUB = c.CLUBID or m.AWAYCLUB = c.CLUBID) and m.MATCHID = '" + matchID + "'");
+            foreach (DataRow row in data.Rows)
+            {
+                Club club = new Club(row);
+                listClub.Add(club);
+            }
+            return listClub;
         }
         public static bool AddClub(int clubID, string clubName, string shortName, int establishedYear, string homeField)
         {

@@ -10,25 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Forms.Integration;
 
 namespace QLBD
 {
     /// <summary>
-    /// Interaction logic for BXH.xaml
+    /// Interaction logic for ReportGoal.xaml
     /// </summary>
-    public partial class BXH : UserControl
+    public partial class ReportGoal : Window
     {
-        public BXH()
+        public ReportGoal()
         {
             InitializeComponent();
-            dpDateSelection.SelectedDate = DateTime.Now;
-        }
-
-        private void dpDateSelection_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }

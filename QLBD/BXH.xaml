@@ -18,12 +18,11 @@
         <StackPanel Margin="0,10,0,0">
             <StackPanel  Orientation="Horizontal" Margin="290,0,0,0">
                 <TextBlock VerticalAlignment="Bottom" Text="Ngày:   "></TextBlock>
-                <DatePicker VerticalAlignment="Bottom" Width="159"></DatePicker>
+                <DatePicker x:Name ="dpDateSelection" VerticalAlignment="Bottom" Width="159" SelectedDateChanged="dpDateSelection_SelectedDateChanged"></DatePicker>
                 <StackPanel Width="30"></StackPanel>
-                <Button Content="OK"></Button>
             </StackPanel>
             <StackPanel Height="20"></StackPanel>
-            <DataGrid Height="345"></DataGrid>
+            <DataGrid x:Name="dgCharts" Height="345"></DataGrid>
             <StackPanel Height="20"></StackPanel>
             <Button Content="Xuất báo cáo" Margin="727,0,37,0"></Button>
         </StackPanel>
