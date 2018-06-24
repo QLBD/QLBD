@@ -25,13 +25,15 @@
                         <TextBlock VerticalAlignment="Bottom" Text="Tên viết tắt:    "></TextBlock>
                         <TextBox Width="80"></TextBox>
                         <StackPanel Width="30"></StackPanel>
-                        <Button Content="OK"></Button>
+                        <Button>
+                            <materialDesign:PackIcon Kind="DatabaseSearch"></materialDesign:PackIcon>
+                        </Button>
                     </StackPanel>
                     <StackPanel Height="48" Margin="0,0,-0.2,0"></StackPanel>
-                    <DataGrid x:Name="dgClub" Height="342" Margin="0,0,-0.2,0" SelectionChanged="dgClub_SelectionChanged" IsReadOnly="True"
-                              SelectionMode="Single" SelectionUnit="FullRow">
-                    </DataGrid>
-                </StackPanel>
+                    <DataGrid x:Name="dgClub" Height="342" Margin="0,0,-0.2,0"
+                          SelectionChanged="dgClub_SelectionChanged" IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow">
+                </DataGrid>
+            </StackPanel>
                 <StackPanel Width="18"></StackPanel>
                 <StackPanel Margin="0,0,0,-0.2" Width="299">
                     <StackPanel Height="10"></StackPanel>
@@ -41,32 +43,37 @@
                         <TextBlock VerticalAlignment="Bottom" Text="Mã CLB: "></TextBlock>
                         <TextBox x:Name="tbClubID" Width="100"/>
                         <StackPanel Width="10"></StackPanel>
-                        <TextBlock VerticalAlignment="Bottom" Text="VT:  "></TextBlock>
+                        <TextBlock VerticalAlignment="Bottom" Text="Viết tắt:  "></TextBlock>
                         <TextBox x:Name="tbShortName" Width="93" Margin="0,0,0,-0.2"></TextBox>
                     </StackPanel>
-                    <StackPanel Height="15"></StackPanel>
+                    <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Tên đội bóng:  "></TextBlock>
                         <TextBox x:Name="tbClubName" Width="184"></TextBox>
                     </StackPanel>
-                    <StackPanel Height="15"></StackPanel>
+                    <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Năm thành lập:  "></TextBlock>
                         <TextBox x:Name="tbEstablishYear" Width="170"></TextBox>
                     </StackPanel>
-                    <StackPanel Height="15"></StackPanel>
+                    <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Sân nhà:    "></TextBlock>
                         <TextBox x:Name="tbHomeField" Width="188"></TextBox>
                     </StackPanel>
-                    <StackPanel Height="30" Margin="0,0,0.2,0"></StackPanel>
+                    <StackPanel Height="10"></StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Bottom" Text="Số lượng cầu thủ:    "></TextBlock>
+                        <TextBox x:Name="tbTotalPlayer" Width="188" IsReadOnly="True"></TextBox>
+                    </StackPanel>
+                    <StackPanel Height="20" Margin="0,0,0.2,0"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="15"></StackPanel>
-                        <Button Content="Add"></Button>
+                        <Button x:Name="btnAdd" Content="Add" Click="btnAdd_Click"></Button>
                         <StackPanel Width="30"></StackPanel>
-                        <Button Content="Update"></Button>
+                        <Button x:Name="btnUpdate" Content="Update" Click="btnUpdate_Click"></Button>
                         <StackPanel Width="30"></StackPanel>
-                        <Button Content="Delete"></Button>
+                        <Button x:Name="btnDelete" Content="Delete" Click="btnDelete_Click"></Button>
                     </StackPanel>
 
                 </StackPanel>

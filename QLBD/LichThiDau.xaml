@@ -18,14 +18,14 @@
         <StackPanel Margin="0,10,0,0">
             <ComboBox HorizontalAlignment="Center" Margin="282,0,338,0" Width="280">
                 <ComboBoxItem>
-                    Vòng bảng
+                    Vòng 1
                 </ComboBoxItem>
                 <ComboBoxItem>
-                    Vòng 1/6
+                    Vòng 2
                 </ComboBoxItem>
             </ComboBox>
             <StackPanel Height="10"></StackPanel>
-            <TextBlock HorizontalAlignment="Center" Text="VÒNG BẢNG" FontSize="20" FontWeight="Bold"></TextBlock>
+            <TextBlock HorizontalAlignment="Center" Text="VÒNG 1" FontSize="20" FontWeight="Bold"></TextBlock>
             <StackPanel Height="10"></StackPanel>
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="80,0,34,0" Width="786">
                 <StackPanel Width="27"></StackPanel>
@@ -42,9 +42,9 @@
             <StackPanel Height="307"></StackPanel>
             <StackPanel Height="20"></StackPanel>
             <StackPanel Orientation="Horizontal" Margin="262,0,137,0">
-                <Button Content="Load all rounds"></Button>
+                <Button Content="Tất cả các trận" Width="154"></Button>
                 <StackPanel Width="100"></StackPanel>
-                <Button Content="General new fixtures"></Button>
+                <Button Content="Tạo lịch thi đấu mới"></Button>
             </StackPanel>
         </StackPanel>
 

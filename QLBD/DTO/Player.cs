@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLBD.DTO
 {
@@ -14,7 +11,6 @@ namespace QLBD.DTO
             PlayerID = (int)row["PLAYERID"];
             ClubID = (int)row["CLUBID"];
             Name = row["NAME"].ToString();
-            Number = (int)row["NUMBER"];
             Position = row["POSITION"].ToString();
             Nationality = row["NATIONALITY"].ToString();
             BirthDay = DateTime.Parse(row["BIRTHDAY"].ToString());
@@ -26,7 +22,6 @@ namespace QLBD.DTO
         public int PlayerID { get; set; }
         public int ClubID { get; set; }
         public string Name { get; set; }
-        public int Number { get; set; }
         public string Position { get; set; }
         public string Nationality { get; set; }
         public DateTime BirthDay { get; set; }

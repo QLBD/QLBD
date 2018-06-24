@@ -23,8 +23,11 @@
                         <TextBlock VerticalAlignment="Bottom" Text="Mã CT:   "></TextBlock>
                         <TextBox Width="76"></TextBox>
                         <StackPanel Width="20"></StackPanel>
+                        <TextBlock VerticalAlignment="Bottom" Text="CLB:   "></TextBlock>
+                        <TextBox Width="76"></TextBox>
+                        <StackPanel Width="20"></StackPanel>
                         <TextBlock VerticalAlignment="Bottom" Text="Họ tên:    "></TextBlock>
-                        <TextBox Width="216"></TextBox>
+                        <TextBox Width="195"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Độ tuổi:    Từ   "></TextBlock>
@@ -34,14 +37,7 @@
                         <TextBox Width="40"></TextBox>
                         <StackPanel Width="25"></StackPanel>
                         <TextBlock VerticalAlignment="Bottom" Text="Quốc tịch:    "></TextBlock>
-                        <ComboBox Width="128">
-                            <ComboBoxItem>
-                                Việt Nam
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Thái Lan
-                            </ComboBoxItem>
-                        </ComboBox>
+                        <TextBox Width="99"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Tổng bàn thắng:    Từ   "></TextBlock>
@@ -51,7 +47,9 @@
                         <TextBox Width="40"></TextBox>
                     </StackPanel>
                     <StackPanel Height="20"></StackPanel>
-                    <Button VerticalAlignment="Bottom" Content="OK" Margin="451,0,27.6,0"></Button>
+                    <Button VerticalAlignment="Bottom" Margin="451,0,27.6,0">
+                        <materialDesign:PackIcon Kind="DatabaseSearch"></materialDesign:PackIcon>
+                    </Button>
                     <StackPanel Height="20"></StackPanel>
                     <DataGrid x:Name="dgPlayer" Height="283" Margin="0,0,-0.4,0" SelectionChanged="dgPlayer_SelectionChanged"
                               SelectionMode="Single" SelectionUnit="FullRow">
@@ -65,7 +63,7 @@
                         <TextBox x:Name ="tbPlayerID"  Width="80"></TextBox>
                         <StackPanel Width="10"></StackPanel>
                         <TextBlock VerticalAlignment="Bottom" Text="CLB:  "></TextBlock>
-                        <TextBox x:Name="tbClubName" Width="100"></TextBox>
+                        <ComboBox x:Name="cboClubName" Width="100"></ComboBox>
                     </StackPanel>
                     <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
@@ -88,7 +86,7 @@
                     <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Ngày sinh: "></TextBlock>
-                        <TextBox x:Name="tbBirthDay"  Width="200"></TextBox>
+                        <DatePicker x:Name="dpBirthDay"  Width="200"></DatePicker>
                         <StackPanel Width="10"></StackPanel>
                     </StackPanel>
                     <StackPanel Height="10"></StackPanel>
@@ -107,12 +105,11 @@
                     <StackPanel Height="17" Margin="0,0,-0.2,0"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="18"></StackPanel>
-                        <Button Content="Add"></Button>
+                        <Button x:Name="btnAdd" Content="Add" Click="btnAdd_Click"></Button>
                         <StackPanel Width="23"></StackPanel>
-                        <Button Content="Update"></Button>
+                        <Button x:Name="btnUpdate" Content="Update" Click="btnUpdate_Click"></Button>
                         <StackPanel Width="28"></StackPanel>
-                        <Button Content="Delete" Width="92"></Button>
-
+                        <Button x:Name="btnDelete"  Content="Delete" Width="92" Click="btnDelete_Click"></Button>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>

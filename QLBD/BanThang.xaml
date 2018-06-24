@@ -20,8 +20,8 @@
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Width="20"></StackPanel>
                     <ComboBox SelectedIndex = "0" Width="150">
-                        <ComboBoxItem Content = "Vòng bảng" />
-                        <ComboBoxItem Content="Vòng 1/8"/>
+                        <ComboBoxItem Content = "Vòng 1" />
+                        <ComboBoxItem Content="Vòng 2"/>
                     </ComboBox>
                     <Button Margin="20,10" Content="OK"/>
                 </StackPanel>
@@ -44,17 +44,17 @@
             </StackPanel>
             <StackPanel Width="20"></StackPanel>
             <StackPanel Margin="0,0,0,0.4" Width="571">
-                <TextBlock HorizontalAlignment="Center" Text="VÒNG BẢNG" FontSize="20" FontWeight="Bold" Margin="231,0,215.2,0" Height="27" Width="125"/>
+                <TextBlock HorizontalAlignment="Center" Text="VÒNG 1" FontSize="20" FontWeight="Bold" Margin="231,0,215.2,0" Height="27" Width="125"/>
                 <StackPanel Height="20"></StackPanel>
                 <DataGrid Height="185" Margin="0,0,0.2,0"></DataGrid>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock VerticalAlignment="Bottom" Text="Đội ghi bàn:  "></TextBlock>
                     <ComboBox SelectedIndex="0" Width="163">
                         <ComboBoxItem>
-                            HAGL
+                            Đội nhà
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            SLNA
+                            Đội khách
                         </ComboBoxItem>
                     </ComboBox>
                     <StackPanel Width="20"></StackPanel>
