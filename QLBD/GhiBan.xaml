@@ -18,18 +18,20 @@
         <StackPanel Margin="0,10,0,0">
             <StackPanel Orientation="Horizontal" Margin="89,0,72,0">
                 <TextBlock VerticalAlignment="Bottom" Text="Từ ngày:   "></TextBlock>
-                <DatePicker VerticalAlignment="Bottom" Width="190"></DatePicker>
+                <DatePicker x:Name="dpFromDate"  VerticalAlignment="Bottom" Width="190"></DatePicker>
                 <StackPanel Width="67"></StackPanel>
                 <TextBlock VerticalAlignment="Bottom" Text="Đến ngày:   "></TextBlock>
-                <DatePicker VerticalAlignment="Bottom" Width="190"></DatePicker>
+                <DatePicker x:Name="dpToDate" VerticalAlignment="Bottom" Width="190"></DatePicker>
                 <StackPanel Width="40"></StackPanel>
-                <Button Content="Xem danh sách"></Button>
+                <Button x:Name="btnShowList"  Content="Xem danh sách" Click="btnShowList_Click"></Button>
             </StackPanel>
             <StackPanel Height=" 30"></StackPanel>
-            <DataGrid Height="332"></DataGrid>
+            <DataGrid x:Name="dgListGoalByPlayer" Height="332" 
+                      IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow" ColumnWidth="*" IsHitTestVisible="False">
+            </DataGrid>
             <StackPanel Height="30"></StackPanel>
-            <Button Content="Xuất báo cáo" Margin="720,0,47,0"></Button>
-            
+            <Button x:Name="btnShowReport" Content="Xuất báo cáo" Margin="720,0,47,0"/>
+
         </StackPanel>
     </Grid>
 </UserControl>

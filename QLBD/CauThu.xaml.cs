@@ -72,6 +72,7 @@ namespace QLBD
                 dpBirthDay.SelectedDate = (DateTime)dataRow["BIRTHDAY"];
                 tbHeight.Text = dataRow["HEIGHT"].ToString();
                 tbWeight.Text = dataRow["WEIGHT"].ToString();
+                tbTotalGoal.Text = GoalDAO.GetTotalGoalPlayerByPlayerID(int.Parse(tbPlayerID.Text)) + "";
             }
         }
 
@@ -84,19 +85,18 @@ namespace QLBD
             string position = tbPosision.Text;
             string nationality = tbNationality.Text;
             DateTime birthday = dpBirthDay.SelectedDate.Value;
-            int age = int.Parse(tbAge.Text);
             float height = float.Parse(tbHeight.Text);
             float weight = float.Parse(tbWeight.Text);
 
-            InsertPlayer(playerID, clubID, playerName, position, nationality, birthday, age, height, weight);
+            InsertPlayer(playerID, clubID, playerName, position, nationality, birthday, height, weight);
             LoadComboBoxClub();
             LoadListPlayer();
         }
 
         private void InsertPlayer(int playerID, int clubID, string playerName, string position, string nationality,
-                DateTime birthday, int age, float height, float weight)
+                DateTime birthday, float height, float weight)
         {
-            if (PlayerDAO.AddPlayer(playerID, clubID, playerName, position, nationality, birthday, age, height, weight))
+            if (PlayerDAO.AddPlayer(playerID, clubID, playerName, position, nationality, birthday, height, weight))
             {
                 MessageBox.Show("THÊM CẦU THỦ THÀNH CÔNG", "THÔNG BÁO");
             }
@@ -115,19 +115,18 @@ namespace QLBD
             string position = tbPosision.Text;
             string nationality = tbNationality.Text;
             DateTime birthday = dpBirthDay.SelectedDate.Value;
-            int age = int.Parse(tbAge.Text);
             float height = float.Parse(tbHeight.Text) * 1.00f;
             float weight = float.Parse(tbWeight.Text) * 1.00f;
 
-            UpdatePlayer(playerID, clubID, playerName, position, nationality, birthday, age, height, weight);
+            UpdatePlayer(playerID, clubID, playerName, position, nationality, birthday, height, weight);
             LoadComboBoxClub();
             LoadListPlayer();
         }
 
         private void UpdatePlayer(int playerID, int clubID, string playerName, string position, string nationality,
-            DateTime birthday, int age, float height, float weight)
+            DateTime birthday, float height, float weight)
         {
-            if (PlayerDAO.UpdatePlayer(playerID, clubID, playerName, position, nationality, birthday, age, height, weight))
+            if (PlayerDAO.UpdatePlayer(playerID, clubID, playerName, position, nationality, birthday, height, weight))
             {
                 MessageBox.Show("CẬP NHẬT CẦU THỦ THÀNH CÔNG", "THÔNG BÁO");
             }

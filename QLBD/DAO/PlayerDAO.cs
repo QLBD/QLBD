@@ -32,17 +32,17 @@ namespace QLBD.DAO
             return listPlayer;
         }
         public static bool AddPlayer(int playerID, int clubID, string playerName, string position, string nationality,
-                DateTime birthday, int age, float height, float weight)
+                DateTime birthday, float height, float weight)
         {
-            string query = "ADD_PLAYER @PLAYERID , @CLUBID , @NAME , @POSITION , @NATIONALITY , @BIRTHDAY , @AGE , @HEIGHT , @WEIGHT ";
-            int result = DataProvider.ExecuteNonQuery(query, new object[] { playerID, clubID, playerName, position, nationality, birthday, age, height, weight });
+            string query = "ADD_PLAYER @PLAYERID , @CLUBID , @NAME , @POSITION , @NATIONALITY , @BIRTHDAY , @HEIGHT , @WEIGHT ";
+            int result = DataProvider.ExecuteNonQuery(query, new object[] { playerID, clubID, playerName, position, nationality, birthday, height, weight });
             return result > 0;
         }
         public static bool UpdatePlayer(int playerID, int clubID, string playerName, string position, string nationality,
-                DateTime birthday, int age, float height, float weight)
+                DateTime birthday, float height, float weight)
         {
-            string query = "UPDATE_PLAYER @PLAYERID , @CLUBID , @NAME , @POSITION , @NATIONALITY , @BIRTHDAY , @AGE , @HEIGHT , @WEIGHT ";
-            int result = DataProvider.ExecuteNonQuery(query, new object[] { playerID, clubID, playerName, position, nationality, birthday, age, height, weight });
+            string query = "UPDATE_PLAYER @PLAYERID , @CLUBID , @NAME , @POSITION , @NATIONALITY , @BIRTHDAY , @HEIGHT , @WEIGHT ";
+            int result = DataProvider.ExecuteNonQuery(query, new object[] { playerID, clubID, playerName, position, nationality, birthday, height, weight });
             return result > 0;
         }
         public static bool DeletePlayer(int playerID)

@@ -68,7 +68,7 @@
                     <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Tuổi: "></TextBlock>
-                        <TextBox x:Name="tbAge"  Width="80"></TextBox>
+                        <TextBox x:Name="tbAge"  Width="80" IsReadOnly="True"></TextBox>
                         <StackPanel Width="10"></StackPanel>
                         <TextBlock VerticalAlignment="Bottom" Text="Vị Trí:  "></TextBlock>
                         <TextBox x:Name="tbPosision" Width="100"></TextBox>
@@ -100,7 +100,7 @@
                     <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Tổng số bàn thắng:   "></TextBlock>
-                        <TextBox x:Name="tbTotalGoal"  Width="161"></TextBox>
+                        <TextBox x:Name="tbTotalGoal"  Width="161" IsReadOnly="True"></TextBox>
                     </StackPanel>
                     <StackPanel Height="17" Margin="0,0,-0.2,0"></StackPanel>
                     <StackPanel Orientation="Horizontal">

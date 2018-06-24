@@ -24,19 +24,19 @@
                 <StackPanel Width="486" Height="156">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Độ tuổi cầu thủ:            Từ:   "></TextBlock>
-                        <TextBox Width="73"></TextBox>
+                        <TextBox x:Name="tbMinAge" Width="73"></TextBox>
                         <TextBlock VerticalAlignment="Bottom" Text="Đến:    "></TextBlock>
-                        <TextBox Width="90"></TextBox>
+                        <TextBox x:Name="tbMaxAge"  Width="90"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Số lượng cầu thủ:          Từ:  "></TextBlock>
-                        <TextBox Width="73"></TextBox>
+                        <TextBox x:Name="tbMinPlayer" Width="73"></TextBox>
                         <TextBlock VerticalAlignment="Bottom" Text="Đến:  "></TextBlock>
-                        <TextBox Width="90"></TextBox>
+                        <TextBox x:Name="tbMaxPlayer" Width="90"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Số cầu thủ nước ngoài tối đa:        "></TextBlock>
-                        <TextBox Width="87"></TextBox>
+                        <TextBox x:Name="tbMaxForeignPlayer" Width="87"></TextBox>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
@@ -66,15 +66,15 @@
                     <TextBlock Text="Quy định bàn thắng - xếp hạng:"></TextBlock>
                     <StackPanel Height="20"></StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Thời gian thi đấu:  "></TextBlock>
-                        <TextBox Width="50"></TextBox>
+                        <TextBlock Text="Thời gian ghi bàn tối đa:  "></TextBlock>
+                        <TextBox x:Name="tbMaxGoalTime" Width="64"></TextBox>
                     </StackPanel>
                     <StackPanel Height="20"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="159">
                             <TextBlock Text="Loại bàn thắng:"></TextBlock>
                             <StackPanel Height="10"></StackPanel>
-                            <ListView Height="105" Margin="0,0,0.2,0"></ListView>
+                            <ListView x:Name="lvGoalType" Height="105" Margin="0,0,0.2,0"></ListView>
                         </StackPanel>
                         <StackPanel Width="38"></StackPanel>
                         <StackPanel>
@@ -94,15 +94,15 @@
                     <StackPanel Height="48" ></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Điểm thắng:   "></TextBlock>
-                        <TextBox Width="43"></TextBox>
+                        <TextBox x:Name="tbWinScore" Width="43"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Điểm hòa:      "></TextBlock>
-                        <TextBox Width="43"></TextBox>
+                        <TextBox x:Name="tbDrawScore" Width="43"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Điểm thua:     "></TextBlock>
-                        <TextBox Width="43"></TextBox>
+                        <TextBox x:Name="tbLoseScore" Width="43"></TextBox>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Width="83"></StackPanel>

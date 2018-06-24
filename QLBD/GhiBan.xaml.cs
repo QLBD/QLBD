@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLBD.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,25 @@ namespace QLBD
         public GhiBan()
         {
             InitializeComponent();
+            LoadDateTimePickerRevenue();
+        }
+        void LoadDateTimePickerRevenue()
+        {
+            dpFromDate.SelectedDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            dpToDate.SelectedDate = dpFromDate.SelectedDate.Value.AddMonths(1).AddDays(-1);
+        }
+
+        private void btnShowList_Click(object sender, RoutedEventArgs e)
+        {
+            DateTime fromDate = dpFromDate.SelectedDate.Value;
+            DateTime toDate = dpToDate.SelectedDate.Value;
+            ShowListGoalByPlayer(fromDate, toDate);
+        }
+
+        private void ShowListGoalByPlayer(DateTime fromDate, DateTime toDate)
+        {
+            string query = "DSGHIBAN @START , @END ";
+            dgListGoalByPlayer.ItemsSource = DataProvider.ExecuteQuery(query, new object[] { fromDate, toDate }).DefaultView;
         }
     }
 }

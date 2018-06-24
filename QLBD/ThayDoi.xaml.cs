@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QLBD.DAO;
+using QLBD.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,28 @@ namespace QLBD
         public ThayDoi()
         {
             InitializeComponent();
+            LoadParameterSetting();
+            LoadListGoalType();
+        }
+
+        private void LoadListGoalType()
+        {
+            lvGoalType.ItemsSource = GoalTypeDAO.GetAllListGoalType();
+            lvGoalType.DisplayMemberPath = "GoalTypeName";
+        }
+
+        private void LoadParameterSetting()
+        {
+            Setting setting = SettingDAO.GetParameterSetting();
+            tbMinAge.Text = setting.MinAge + "";
+            tbMaxAge.Text = setting.MaxAge + "";
+            tbMinPlayer.Text = setting.MinPlayer + "";
+            tbMaxPlayer.Text = setting.MaxPlayer + "";
+            tbMaxForeignPlayer.Text = setting.MaxForeignPlayer + "";
+            tbMaxGoalTime.Text = setting.MaxGoalTime + "";
+            tbWinScore.Text = setting.WinScore + "";
+            tbDrawScore.Text = setting.DrawScore + "";
+            tbLoseScore.Text = setting.LoseScore + "";
         }
     }
 }

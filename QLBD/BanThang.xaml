@@ -72,7 +72,7 @@
                     </ComboBox>
                         <StackPanel Width="20"></StackPanel>
                     <TextBlock VerticalAlignment="Bottom" Text="Mã bàn thắng:  "></TextBlock>
-                    <TextBox x:Name="tbGoalID" Width="66"></TextBox>
+                    <TextBox x:Name="tbGoalID" Width="66" IsReadOnly="True"></TextBox>
                 </StackPanel>
                 <StackPanel Height="15" Margin="0,0,0.2,0"></StackPanel>
                 <StackPanel Orientation="Horizontal">

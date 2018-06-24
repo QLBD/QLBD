@@ -11,7 +11,7 @@ namespace QLBD.DAO
     {
         public static DataTable GetGoalsByMatchID(int matchID)
         {
-            return DataProvider.ExecuteQuery("select * from GOAL where MATCHID = '" + matchID + "'");
+            return DataProvider.ExecuteQuery("select * from GOAL where MATCHID = '" + matchID + "' order by GOALTIME");
         }
         public static bool AddGoal(int goalID, int matchID, int clubID, int playerID, int goalTypeID, int goalTime)
         {
@@ -29,6 +29,11 @@ namespace QLBD.DAO
         {
             int result = DataProvider.ExecuteNonQuery("DELETE GOAL WHERE GOAL = '" + goalID + "'");
             return result > 0;
+        }
+        public static int GetTotalGoalPlayerByPlayerID(int playerID)
+        {
+            int result = (int)DataProvider.ExecuteScalar("SLGHIBAN @PLAYERID", new object[] { playerID });
+            return result;
         }
     }
 
