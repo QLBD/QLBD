@@ -18,58 +18,45 @@
         <StackPanel>
             <StackPanel Orientation="Horizontal" Margin="262,0,194,0">
                 <TextBlock VerticalAlignment="Bottom" Text="Vòng đấu:" Width="95"></TextBlock>
-                <ComboBox Width="211">
-                    <ComboBoxItem>
-                        Vòng 1
-                    </ComboBoxItem>
-                    <ComboBoxItem>
-                        Vòng 2
-                    </ComboBoxItem>
-                </ComboBox>
+                <ComboBox x:Name="cboRound" Width="211" SelectionChanged="cboRound_SelectionChanged" HorizontalContentAlignment="Center"></ComboBox>
             </StackPanel>
             <StackPanel Height="10"></StackPanel>
-            <TextBlock HorizontalAlignment="Center" Text="VÒNG 1" FontSize="20" FontWeight="Bold"></TextBlock>
             <StackPanel Height="10"></StackPanel>
-            <DataGrid Height="208"></DataGrid>
+            <DataGrid x:Name="dgMatch" Height="208" SelectionChanged="dgMatch_SelectionChanged" 
+                      IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow">
+            </DataGrid>
             <StackPanel Height="20"></StackPanel>
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Vòng:   " VerticalAlignment="Bottom"></TextBlock>
-                    <ComboBox SelectedIndex="0">
-                        <ComboBoxItem>
-                            Vòng 1
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            Vòng 2
-                        </ComboBoxItem>
-                    </ComboBox>
+                    <ComboBox x:Name="cboRoundMatch"  Width="100" ></ComboBox>
                     <StackPanel Width="50"></StackPanel>
                     <TextBlock VerticalAlignment="Bottom" Text="Mã trận đấu:   "></TextBlock>
-                    <TextBox Width="100"></TextBox>
+                    <TextBox x:Name="tbMatchID" Width="100"></TextBox>
                     <StackPanel Width="50"></StackPanel>
                     <TextBlock VerticalAlignment="Bottom" Text="Ngày:    "></TextBlock>
-                    <DatePicker VerticalAlignment="Bottom" Width="172"></DatePicker>
+                    <DatePicker x:Name="dpMatchDay"  VerticalAlignment="Bottom" Width="172"></DatePicker>
                     <StackPanel Width="50"></StackPanel>
-                    <materialDesign:TimePicker VerticalAlignment="Bottom" Text="Chọn giờ đấu: "></materialDesign:TimePicker>
+                    <materialDesign:TimePicker x:Name="tpMathcTime" VerticalAlignment="Bottom" Text="Chọn giờ đấu: "></materialDesign:TimePicker>
                 </StackPanel>
                 <StackPanel Height="15"></StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock VerticalAlignment="Bottom" Text="Đội nhà:   "></TextBlock>
-                    <ComboBox Width="113"></ComboBox>
+                    <ComboBox x:Name="cboHomeClub" Width="113" SelectionChanged="cboHomeClub_SelectionChanged"></ComboBox>
                     <StackPanel Width="59"></StackPanel>
                     <TextBlock VerticalAlignment="Bottom" Text="Đội khách:   "></TextBlock>
-                    <ComboBox Width="113"></ComboBox>
+                    <ComboBox x:Name="cboAwayClub"  Width="113"></ComboBox>
                     <StackPanel Width="87"></StackPanel>
                     <TextBlock VerticalAlignment="Bottom" Text="Sân:   "></TextBlock>
-                    <TextBox Width="147"></TextBox>
+                    <TextBox x:Name="tbStadium" Width="147" IsReadOnly="True"></TextBox>
                 </StackPanel>
                 <StackPanel Height="33"></StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="585,0,25,0">
-                    <Button Content="Add"></Button>
+                    <Button x:Name="btnAdd" Content="Add" Click="btnAdd_Click"></Button>
                     <StackPanel Width="30"></StackPanel>
-                    <Button Content="Update"></Button>
+                    <Button x:Name="btnUpdate" Content="Update" Click="btnUpdate_Click"></Button>
                     <StackPanel Width="30"></StackPanel>
-                    <Button Content="Delete"></Button>
+                    <Button x:Name="btnDelete" Content="Delete" Click="btnDelete_Click"></Button>
                 </StackPanel>
                 
             </StackPanel>

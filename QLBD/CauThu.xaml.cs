@@ -58,7 +58,7 @@ namespace QLBD
                 int i;
                 for(i = 0; i < cboClubName.Items.Count; i++)
                 {
-                    Club club = cboClubName.Items[0] as Club;
+                    Club club = cboClubName.Items[i] as Club;
                     if (clubID == club.ClubID)
                         break;
                 }
@@ -83,7 +83,7 @@ namespace QLBD
             string playerName = tbPlayerName.Text;
             string position = tbPosision.Text;
             string nationality = tbNationality.Text;
-            DateTime birthday = dpBirthDay.DisplayDate;
+            DateTime birthday = dpBirthDay.SelectedDate.Value;
             int age = int.Parse(tbAge.Text);
             float height = float.Parse(tbHeight.Text);
             float weight = float.Parse(tbWeight.Text);
@@ -114,7 +114,7 @@ namespace QLBD
             string playerName = tbPlayerName.Text;
             string position = tbPosision.Text;
             string nationality = tbNationality.Text;
-            DateTime birthday = dpBirthDay.DisplayDate;
+            DateTime birthday = dpBirthDay.SelectedDate.Value;
             int age = int.Parse(tbAge.Text);
             float height = float.Parse(tbHeight.Text) * 1.00f;
             float weight = float.Parse(tbWeight.Text) * 1.00f;
