@@ -14,37 +14,64 @@
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}">
-    <Grid>
-        <StackPanel Margin="0,10,0,0">
-            <ComboBox HorizontalAlignment="Center" Margin="282,0,338,0" Width="280">
-                <ComboBoxItem>
-                    Vòng 1
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    Vòng 2
-                </ComboBoxItem>
-            </ComboBox>
+    <Grid Margin="10">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="262,0,194,0">
+                <TextBlock VerticalAlignment="Bottom" Text="Vòng đấu:" Width="95"></TextBlock>
+                <ComboBox Width="211">
+                    <ComboBoxItem>
+                        Vòng 1
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        Vòng 2
+                    </ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
             <StackPanel Height="10"></StackPanel>
             <TextBlock HorizontalAlignment="Center" Text="VÒNG 1" FontSize="20" FontWeight="Bold"></TextBlock>
             <StackPanel Height="10"></StackPanel>
-            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="80,0,34,0" Width="786">
-                <StackPanel Width="27"></StackPanel>
-                <TextBlock Text="ID" Width="32"></TextBlock>
-                <StackPanel Width="82"></StackPanel>
-                <TextBlock Text="ĐỘI NHÀ"></TextBlock>
-                <StackPanel Width="106"></StackPanel>
-                <TextBlock Text="ĐỘI KHÁCH"></TextBlock>
-                <StackPanel Width="108"></StackPanel>
-                <TextBlock Text="THỜI GIAN"></TextBlock>
-                <StackPanel Width="79"></StackPanel>
-                <TextBlock Text="SÂN THI ĐẤU"></TextBlock>
-            </StackPanel>
-            <StackPanel Height="307"></StackPanel>
+            <DataGrid Height="208"></DataGrid>
             <StackPanel Height="20"></StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="262,0,137,0">
-                <Button Content="Tất cả các trận" Width="154"></Button>
-                <StackPanel Width="100"></StackPanel>
-                <Button Content="Tạo lịch thi đấu mới"></Button>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Vòng:   " VerticalAlignment="Bottom"></TextBlock>
+                    <ComboBox SelectedIndex="0">
+                        <ComboBoxItem>
+                            Vòng 1
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            Vòng 2
+                        </ComboBoxItem>
+                    </ComboBox>
+                    <StackPanel Width="50"></StackPanel>
+                    <TextBlock VerticalAlignment="Bottom" Text="Mã trận đấu:   "></TextBlock>
+                    <TextBox Width="100"></TextBox>
+                    <StackPanel Width="50"></StackPanel>
+                    <TextBlock VerticalAlignment="Bottom" Text="Ngày:    "></TextBlock>
+                    <DatePicker VerticalAlignment="Bottom" Width="172"></DatePicker>
+                    <StackPanel Width="50"></StackPanel>
+                    <materialDesign:TimePicker VerticalAlignment="Bottom" Text="Chọn giờ đấu: "></materialDesign:TimePicker>
+                </StackPanel>
+                <StackPanel Height="15"></StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Bottom" Text="Đội nhà:   "></TextBlock>
+                    <ComboBox Width="113"></ComboBox>
+                    <StackPanel Width="59"></StackPanel>
+                    <TextBlock VerticalAlignment="Bottom" Text="Đội khách:   "></TextBlock>
+                    <ComboBox Width="113"></ComboBox>
+                    <StackPanel Width="87"></StackPanel>
+                    <TextBlock VerticalAlignment="Bottom" Text="Sân:   "></TextBlock>
+                    <TextBox Width="147"></TextBox>
+                </StackPanel>
+                <StackPanel Height="33"></StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="585,0,25,0">
+                    <Button Content="Add"></Button>
+                    <StackPanel Width="30"></StackPanel>
+                    <Button Content="Update"></Button>
+                    <StackPanel Width="30"></StackPanel>
+                    <Button Content="Delete"></Button>
+                </StackPanel>
+                
             </StackPanel>
         </StackPanel>
 

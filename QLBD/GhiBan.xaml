@@ -16,13 +16,13 @@
      FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
         <StackPanel Margin="0,10,0,0">
-            <StackPanel Orientation="Horizontal" Margin="97,0,72,0">
+            <StackPanel Orientation="Horizontal" Margin="89,0,72,0">
                 <TextBlock VerticalAlignment="Bottom" Text="Từ ngày:   "></TextBlock>
-                <TextBox Width="165"></TextBox>
+                <DatePicker VerticalAlignment="Bottom" Width="190"></DatePicker>
                 <StackPanel Width="67"></StackPanel>
                 <TextBlock VerticalAlignment="Bottom" Text="Đến ngày:   "></TextBlock>
-                <TextBox Width="165"></TextBox>
-                <StackPanel Width="77"></StackPanel>
+                <DatePicker VerticalAlignment="Bottom" Width="190"></DatePicker>
+                <StackPanel Width="40"></StackPanel>
                 <Button Content="Xem danh sách"></Button>
             </StackPanel>
             <StackPanel Height=" 30"></StackPanel>

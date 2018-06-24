@@ -14,10 +14,11 @@
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}">
-    <Grid>
+    <Grid Margin="10">
         <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-            <StackPanel Margin="0,0,0,0.4" Width="327">
+            <StackPanel Margin="0,0,0,0.6" Width="327">
                 <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center" Text="Vòng:  "></TextBlock>
                     <StackPanel Width="20"></StackPanel>
                     <ComboBox SelectedIndex = "0" Width="150">
                         <ComboBoxItem Content = "Vòng 1" />
@@ -27,14 +28,16 @@
                 </StackPanel>
                 <DataGrid Height="223" Margin="0,0,0.2,0"></DataGrid>
                 <StackPanel Orientation="Horizontal" Margin="10,0,10.2,0" Height="146">
-                    <StackPanel Width="108">
+                    <StackPanel Width="93" Margin="0,0,0,-0.4">
                         <TextBlock HorizontalAlignment = "Center" Text="HAGL" FontWeight="Bold" FontSize="20" Height="25"/>
                         <Image Source="02.PNG"/>
                     </StackPanel>
+                    <StackPanel Width="10" Margin="0,0,0,-0.4"></StackPanel>
+                    <TextBox Width="36" VerticalAlignment="Center"></TextBox>
+                    <TextBlock Text="-" FontSize="30" VerticalAlignment="Center"></TextBlock>
+                    <TextBox Width="36" VerticalAlignment="Center"></TextBox>
                     <StackPanel Width="20"></StackPanel>
-                    <TextBlock Text="2-1" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                    <StackPanel Width="20"></StackPanel>
-                    <StackPanel Margin="0,0,0,-0.4" Width="108">
+                    <StackPanel Margin="0,0,0,-0.4" Width="94">
                         <TextBlock HorizontalAlignment = "Center" Text="SLNA" FontWeight="Bold" FontSize="20" Height="25"/>
                         <Image Source="02.PNG"/>
                     </StackPanel>
@@ -43,30 +46,45 @@
 
             </StackPanel>
             <StackPanel Width="20"></StackPanel>
-            <StackPanel Margin="0,0,0,0.4" Width="571">
-                <TextBlock HorizontalAlignment="Center" Text="VÒNG 1" FontSize="20" FontWeight="Bold" Margin="231,0,215.2,0" Height="27" Width="125"/>
+            <StackPanel Margin="0,0,0,0.6" Width="534">
+                <TextBlock HorizontalAlignment="Center" Text="VÒNG 1" FontSize="20" FontWeight="Bold" Margin="244,0,196.4,0" Height="27" Width="94"/>
                 <StackPanel Height="20"></StackPanel>
-                <DataGrid Height="185" Margin="0,0,0.2,0"></DataGrid>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Mã trận đấu:   "></TextBlock>
+                    <TextBlock Text="01"></TextBlock>
+                    <StackPanel Width="30"></StackPanel>
+                    <TextBlock Text="Ngày:   "></TextBlock>
+                    <TextBlock Text="20/08/2012"></TextBlock>
+                    <StackPanel Width="30"></StackPanel>
+                    <TextBlock Text="Giờ:   "></TextBlock>
+                    <TextBlock Text="04:30PM"></TextBlock>
+                    <StackPanel Width="30"></StackPanel>
+                    <TextBlock Text="Sân:  "></TextBlock>
+                    <TextBlock Text="Mỹ Đình"></TextBlock>
+                </StackPanel>
+                <StackPanel Height="10"></StackPanel>
+                <DataGrid Height="170" Margin="0,0,0.2,0"></DataGrid>
+                <StackPanel Height="15" Margin="0,0,0.2,0"></StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock VerticalAlignment="Bottom" Text="Đội ghi bàn:  "></TextBlock>
                     <ComboBox SelectedIndex="0" Width="163">
                         <ComboBoxItem>
-                            Đội nhà
+                            HAGL
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            Đội khách
+                            SLNA
                         </ComboBoxItem>
                     </ComboBox>
                     <StackPanel Width="20"></StackPanel>
                     <TextBlock VerticalAlignment="Bottom" Text="Mã bàn thắng:  "></TextBlock>
-                    <TextBox Width="177"></TextBox>
+                    <TextBox Width="66"></TextBox>
                 </StackPanel>
-                <StackPanel Height="10"></StackPanel>
+                <StackPanel Height="15" Margin="0,0,0.2,0"></StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock VerticalAlignment="Bottom" Text="Cầu thủ ghi bàn:  "></TextBlock>
                     <ComboBox SelectedIndex="0" Width="138">
                         <ComboBoxItem>
-                           Lê Công Vinh
+                            Lê Công Vinh
                         </ComboBoxItem>
                         <ComboBoxItem>
                             Phạm Xuân Trường
@@ -76,45 +94,23 @@
                     <TextBlock Text="Mã trận đấu:  " VerticalAlignment="Bottom"></TextBlock>
                     <TextBox Width="190"></TextBox>
                 </StackPanel>
-                <StackPanel Height="10"></StackPanel>
+                <StackPanel Height="15" Margin="0,0,0.2,0"></StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock VerticalAlignment="Bottom" Text="Câu lạc bộ:      "></TextBlock>
-                    <ComboBox SelectedIndex="0" Width="158">
-                        <ComboBoxItem>
-                            HAGL
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            SLNA
-                        </ComboBoxItem>
-                    </ComboBox>
-                    <StackPanel Width="20"></StackPanel>
                     <TextBlock VerticalAlignment="Bottom" Text="Loại BT:  "></TextBlock>
-                    <ComboBox SelectedIndex="0" Width="219">
+                    <ComboBox SelectedIndex="0" Width="152">
                         <ComboBoxItem>
-                            Right-foot
+                            A
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            Penalty
+                            B
                         </ComboBoxItem>
                     </ComboBox>
+                    <StackPanel Width="55"></StackPanel>
+                    <TextBlock Text="Phút ghi bàn:  " VerticalAlignment="Bottom"></TextBlock>
                 </StackPanel>
                 <StackPanel Height="10"></StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock VerticalAlignment="Bottom" Text="Mã cầu thủ:  "></TextBlock>
-                    <ComboBox SelectedIndex="0" Width="167">
-                        <ComboBoxItem>
-                            CT001
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            CT002
-                        </ComboBoxItem>
-                    </ComboBox>
-                    <StackPanel Width="20"></StackPanel>
-                    <TextBlock Text="Phút ghi bàn:  " VerticalAlignment="Bottom"></TextBlock>
-                    <TextBox Width="187"></TextBox>
-                </StackPanel>
-                <StackPanel Height="44" Margin="0,0,0.2,0"></StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="257,0,25.2,0">
+                <StackPanel Height="27" Margin="0,0,0.2,0"></StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="244,0,25.2,0">
                     <Button Content="Add"></Button>
                     <StackPanel Width="30"></StackPanel>
                     <Button Content="Update"></Button>
