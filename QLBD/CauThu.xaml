@@ -51,64 +51,65 @@
                         <materialDesign:PackIcon Kind="DatabaseSearch"></materialDesign:PackIcon>
                     </Button>
                     <StackPanel Height="20"></StackPanel>
-                    <DataGrid Height="283" Margin="0,0,-0.4,0"></DataGrid>
+                    <DataGrid x:Name="dgPlayer" Height="283" Margin="0,0,-0.4,0" SelectionChanged="dgPlayer_SelectionChanged"
+                              IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow">
+                    </DataGrid>
                 </StackPanel>
                 <StackPanel Width="28"></StackPanel>
                 <StackPanel Margin="0,0,0,-0.2" Width="313">
                     <Image Height="163" Margin="0,0,-0.2,0" Source="02.png"></Image>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Mã CT: "></TextBlock>
-                        <TextBox Width="80"></TextBox>
+                        <TextBox x:Name ="tbPlayerID"  Width="80"></TextBox>
                         <StackPanel Width="10"></StackPanel>
                         <TextBlock VerticalAlignment="Bottom" Text="CLB:  "></TextBlock>
-                        <TextBox Width="100"></TextBox>
+                        <ComboBox x:Name="cboClubName" Width="100"></ComboBox>
                     </StackPanel>
                     <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Tuổi: "></TextBlock>
-                        <TextBox Width="80"></TextBox>
+                        <TextBox x:Name="tbAge"  Width="80"></TextBox>
                         <StackPanel Width="10"></StackPanel>
-                        <TextBlock VerticalAlignment="Bottom" Text="Loại CT:  "></TextBlock>
-                        <TextBox Width="100"></TextBox>
+                        <TextBlock VerticalAlignment="Bottom" Text="Vị Trí:  "></TextBlock>
+                        <TextBox x:Name="tbPosision" Width="100"></TextBox>
                     </StackPanel>
                     <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Họ tên:  "></TextBlock>
-                        <TextBox Width="200"></TextBox>
+                        <TextBox x:Name="tbPlayerName" Width="200"></TextBox>
                     </StackPanel>
                     <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Quốc tịch:  "></TextBlock>
-                        <TextBox Width="200"></TextBox>
+                        <TextBox x:Name="tbNationality" Width="200"></TextBox>
                     </StackPanel>
                     <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Ngày sinh: "></TextBlock>
-                        <TextBox Width="200"></TextBox>
+                        <DatePicker x:Name="dpBirthDay"  Width="200"></DatePicker>
                         <StackPanel Width="10"></StackPanel>
                     </StackPanel>
                     <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Chiều cao: "></TextBlock>
-                        <TextBox Width="70"></TextBox>
+                        <TextBox x:Name="tbHeight" Width="70"></TextBox>
                         <StackPanel Width="10"></StackPanel>
                         <TextBlock VerticalAlignment="Bottom" Text="Cân nặng:  "></TextBlock>
-                        <TextBox Width="70"></TextBox>
+                        <TextBox x:Name="tbWeight" Width="70"></TextBox>
                     </StackPanel>
                     <StackPanel Height="10"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Bottom" Text="Tổng số bàn thắng:   "></TextBlock>
-                        <TextBox Width="161"></TextBox>
+                        <TextBox x:Name="tbTotalGoal"  Width="161"></TextBox>
                     </StackPanel>
                     <StackPanel Height="17" Margin="0,0,-0.2,0"></StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Width="18"></StackPanel>
-                        <Button Content="Add"></Button>
+                        <Button x:Name="btnAdd" Content="Add" Click="btnAdd_Click"></Button>
                         <StackPanel Width="23"></StackPanel>
-                        <Button Content="Update"></Button>
+                        <Button x:Name="btnUpdate" Content="Update" Click="btnUpdate_Click"></Button>
                         <StackPanel Width="28"></StackPanel>
-                        <Button Content="Delete" Width="92"></Button>
-
+                        <Button x:Name="btnDelete"  Content="Delete" Width="92" Click="btnDelete_Click"></Button>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>

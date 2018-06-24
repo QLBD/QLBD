@@ -16,9 +16,10 @@ namespace QLBD.DTO
             AwayClub = (int)row["AWAYCLUB"];
             HomeScore = (int)row["HOMESCORE"];
             AwayScore = (int)row["AWAYSCORE"];
-            Round = (int)row["ROUND"];
+            RoundID = (int)row["ROUNDID"];
+            MatchDay = DateTime.Parse(row["MATCHDAY"].ToString());
             MatchTime = DateTime.Parse(row["MATCHTIME"].ToString());
-            MatchID = int.Parse(row["ISPLAYED"].ToString());
+            isPlayed = (bool)row["ISPLAYED"];
         }
 
         public int MatchID { get; set; }
@@ -26,8 +27,9 @@ namespace QLBD.DTO
         public int AwayClub { get; set; }
         public int HomeScore { get; set; }
         public int AwayScore { get; set; }
-        public int Round { get; set; }
+        public int RoundID { get; set; }
+        public DateTime MatchDay { get; set; }
         public DateTime MatchTime { get; set; }
-        public int isPlayed { get; set; }
+        public bool isPlayed { get; set; }
     }
 }

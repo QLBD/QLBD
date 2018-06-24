@@ -43,8 +43,8 @@
         <Grid VerticalAlignment="Bottom" Margin="35,0,35,79.6" Height="240" Grid.ColumnSpan="2">
             <Label Content="LOGIN" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Foreground="Gray" FontSize="18"/>
             <StackPanel VerticalAlignment="Center" Margin="15">
-                <TextBox x:Name="tb_username" Margin="0,10" materialDesign:HintAssist.Hint="USERNAME" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
-                <PasswordBox x:Name="tb_password" Margin="0,10" materialDesign:HintAssist.Hint="PASSWORD" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+                <TextBox x:Name="tb_username" Margin="0,10" materialDesign:HintAssist.Hint="USERNAME" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Text="admin"/>
+                <PasswordBox x:Name="tb_password" Margin="0,10" materialDesign:HintAssist.Hint="PASSWORD" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Password="admin"/>
             </StackPanel>
         </Grid>
         <Button x:Name="btn_Login" Width="150" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="97,0,97,64.6" Content="LOGIN" Click="btn_Login_Click" Grid.ColumnSpan="2" IsDefault="True"/>
