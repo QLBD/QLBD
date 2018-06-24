@@ -26,7 +26,7 @@ namespace QLBD.DAO
             Club club = new Club(data.Rows[0]);
             return club;
         }
-        public static List<Club> GetPlayerByClubID(int matchID)
+        public static List<Club> GetPlayerByClubMatchID(int matchID)
         {
             List<Club> listClub = new List<Club>();
             DataTable data = DataProvider.ExecuteQuery("select c.CLUBID, CLUBNAME, CLUBSHORTNAME, ESTABLISHEDYEAR, HOMEFIELD " +

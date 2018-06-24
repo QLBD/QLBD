@@ -23,7 +23,7 @@ namespace QLBD.DAO
         public static List<Player> GetPlayerByClubID(int clubID)
         {
             List<Player> listPlayer = new List<Player>();
-            DataTable data = DataProvider.ExecuteQuery("select from PLAYER where CLUBID = '" + clubID + "'");
+            DataTable data = DataProvider.ExecuteQuery("select * from PLAYER where CLUBID = '" + clubID + "'");
             foreach(DataRow row in data.Rows)
             {
                 Player player = new Player(row);

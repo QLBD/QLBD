@@ -83,7 +83,6 @@ namespace QLBD
                 tpMathcTime.SelectedTime = DateTime.Parse(dataRow["MATCHTIME"].ToString());
 
                 int roundID = int.Parse(dataRow["ROUNDID"].ToString());
-
                 int k;
                 for (k = 0; k < cboHomeClub.Items.Count; k++)
                 {
@@ -105,9 +104,9 @@ namespace QLBD
 
                 int awayClubID = int.Parse(dataRow["AWAYCLUB"].ToString());
                 int j;
-                for (j = 0; j < cboHomeClub.Items.Count; j++)
+                for (j = 0; j < cboAwayClub.Items.Count; j++)
                 {
-                    Club club = cboHomeClub.Items[j] as Club;
+                    Club club = cboAwayClub.Items[j] as Club;
                     if (awayClubID == club.ClubID)
                         break;
                 }

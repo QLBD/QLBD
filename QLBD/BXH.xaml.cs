@@ -23,6 +23,12 @@ namespace QLBD
         public BXH()
         {
             InitializeComponent();
+            dpDateSelection.SelectedDate = DateTime.Now;
+        }
+
+        private void dpDateSelection_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
