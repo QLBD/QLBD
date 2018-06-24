@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QLBD.DTO;
+using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
@@ -17,6 +19,17 @@ namespace QLBD.DAO
             string query = "select count(*) from PLAYER where CLUBID = '" + clubID + "'";
             result = (int)DataProvider.ExecuteScalar(query);
             return result;
+        }
+        public static List<Player> GetPlayerByClubID(int clubID)
+        {
+            List<Player> listPlayer = new List<Player>();
+            DataTable data = DataProvider.ExecuteQuery("select from PLAYER where CLUBID = '" + clubID + "'");
+            foreach(DataRow row in data.Rows)
+            {
+                Player player = new Player(row);
+                listPlayer.Add(player);
+            }
+            return listPlayer;
         }
         public static bool AddPlayer(int playerID, int clubID, string playerName, string position, string nationality,
                 DateTime birthday, int age, float height, float weight)
