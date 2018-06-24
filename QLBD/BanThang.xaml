@@ -21,22 +21,23 @@
                     <TextBlock VerticalAlignment="Center" Text="Vòng:  "></TextBlock>
                     <StackPanel Width="20"></StackPanel>
                     <ComboBox VerticalContentAlignment="Center" x:Name="cboRound" SelectedIndex = "0" Width="205" SelectionChanged="cboRound_SelectionChanged">
-                        
                     </ComboBox>
                 </StackPanel>
-                <DataGrid x:Name="dgMatch" Height="223" Margin="0,0,0.2,0" SelectionChanged="dgMatch_SelectionChanged"></DataGrid>
+                <DataGrid x:Name="dgMatch" Height="223" Margin="0,0,0.2,0" SelectionChanged="dgMatch_SelectionChanged"
+                          IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow">
+                </DataGrid>
                 <StackPanel Orientation="Horizontal" Margin="10,0,10.2,0" Height="146">
                     <StackPanel Width="93" Margin="0,0,0,-0.4">
-                        <TextBlock x:Name="tbHomeclub"  HorizontalAlignment = "Center" FontWeight="Bold" FontSize="20" Height="25" Margin="10,0,9.8,0" Width="73"/>
+                        <TextBlock x:Name="tbHomeclub"  HorizontalAlignment = "Center" FontWeight="Bold" FontSize="20" Height="25" Margin="10,0,9.8,0" Width="73" TextAlignment="Center"/>
                         <Image Source="02.PNG"/>
                     </StackPanel>
                     <StackPanel Width="10" Margin="0,0,0,-0.4"></StackPanel>
-                    <TextBox x:Name="tboHomescore" Width="36" VerticalAlignment="Center" HorizontalContentAlignment="Center"></TextBox>
+                    <TextBox x:Name="tboHomescore" Width="36" VerticalAlignment="Center" HorizontalContentAlignment="Center" TextAlignment="Center" FontWeight="Bold" FontSize="20"></TextBox>
                     <TextBlock Text="-" FontSize="30" VerticalAlignment="Center"></TextBlock>
-                    <TextBox x:Name="tboAwayscore" Width="36" VerticalAlignment="Center" HorizontalContentAlignment="Center"></TextBox>
+                    <TextBox x:Name="tboAwayscore" Width="36" VerticalAlignment="Center" HorizontalContentAlignment="Center" TextAlignment="Center" FontWeight="Bold" FontSize="20"></TextBox>
                     <StackPanel Width="20"></StackPanel>
                     <StackPanel Margin="0,0,0,-0.4" Width="94">
-                        <TextBlock x:Name="tbAwayclub" HorizontalAlignment = "Center" FontWeight="Bold" FontSize="20" Height="25" Margin="10,0,10.4,0" Width="74"/>
+                        <TextBlock x:Name="tbAwayclub" HorizontalAlignment = "Center" FontWeight="Bold" FontSize="20" Height="25" Margin="10,0,10.4,0" Width="74" TextAlignment="Center"/>
                         <Image Source="02.PNG"/>
                     </StackPanel>
                 </StackPanel>
@@ -49,57 +50,53 @@
                 <StackPanel Height="20"></StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Mã trận đấu:   "></TextBlock>
-                    <TextBlock x:Name="tbMatchid" Width="20"></TextBlock>
+                    <TextBlock x:Name="tbMatchID" Width="20"></TextBlock>
                     <StackPanel Width="30"></StackPanel>
                     <TextBlock Text="Ngày:   "></TextBlock>
-                    <TextBlock x:Name="tbMatchday" Width="100"></TextBlock>
+                    <TextBlock x:Name="tbMatchDay" Width="100"></TextBlock>
                     <StackPanel Width="30"></StackPanel>
                     <TextBlock Text="Giờ:   "></TextBlock>
-                    <TextBlock x:Name="tbMatchtime" Width="50"></TextBlock>
+                    <TextBlock x:Name="tbMatchTime" Width="50"></TextBlock>
                     <StackPanel Width="30"></StackPanel>
                     <TextBlock Text="Sân:  "></TextBlock>
                     <TextBlock x:Name="tbStadium" Width="75"></TextBlock>
                 </StackPanel>
                 <StackPanel Height="10"></StackPanel>
-                <DataGrid Height="170" Margin="0,0,0.2,0"></DataGrid>
+                <DataGrid x:Name="dgGoalByMatch" Height="170" Margin="0,0,0.2,0" SelectionChanged="dgGoalByMatch_SelectionChanged"
+                          IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow">
+                </DataGrid>
                 <StackPanel Height="15" Margin="0,0,0.2,0"></StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock VerticalAlignment="Bottom" Text="Đội ghi bàn:  "></TextBlock>
-                    <ComboBox x:Name="cboClub" SelectedIndex="0" Width="163">
-                    
-                    </ComboBox>
-                    <StackPanel Width="20"></StackPanel>
                     <TextBlock VerticalAlignment="Bottom" Text="Mã bàn thắng:  "></TextBlock>
-                    <TextBox x:Name="cboGoalid" Width="66"></TextBox>
+                    <TextBox x:Name="tbGoalID" Width="66"></TextBox>
+                    <StackPanel Width="94"></StackPanel>
+                    <TextBlock VerticalAlignment="Bottom" Text="Đội ghi bàn:  "></TextBlock>
+                    <ComboBox x:Name="cboClub" Width="163" SelectionChanged="cboClub_SelectionChanged">
+                    </ComboBox>
                 </StackPanel>
                 <StackPanel Height="15" Margin="0,0,0.2,0"></StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock VerticalAlignment="Bottom" Text="Cầu thủ ghi bàn:  "></TextBlock>
-                    <ComboBox x:Name="cboPlayer" SelectedIndex="0" Width="138">
-                        
+                    <ComboBox x:Name="cboPlayer" Width="138">
                     </ComboBox>
-                    <StackPanel Width="20"></StackPanel>
-                    <TextBlock Text="Mã trận đấu:  " VerticalAlignment="Bottom"></TextBlock>
-                    <ComboBox x:Name="cboMatchid" Width="175"></ComboBox>
+                    <StackPanel Width="50"></StackPanel>
+                    <TextBlock VerticalAlignment="Bottom" Text="Loại BT:  "></TextBlock>
+                    <ComboBox x:Name="cboGoalType" Width="152">
+                    </ComboBox>
                 </StackPanel>
                 <StackPanel Height="15" Margin="0,0,0.2,0"></StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock VerticalAlignment="Bottom" Text="Loại BT:  "></TextBlock>
-                    <ComboBox x:Name="cboGoaltype" SelectedIndex="0" Width="152">
-                        
-                    </ComboBox>
-                    <StackPanel Width="55"></StackPanel>
                     <TextBlock Text="Phút ghi bàn:  " VerticalAlignment="Bottom"></TextBlock>
-                    <TextBox x:Name="tboGoaltime" Width="115" ></TextBox>
+                    <TextBox x:Name="tboGoalTime" Width="92" ></TextBox>
                 </StackPanel>
                 <StackPanel Height="10"></StackPanel>
                 <StackPanel Height="27" Margin="0,0,0.2,0"></StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="244,0,25.2,0">
-                    <Button x:Name="btAdd" Content="Add"></Button>
+                    <Button x:Name="btnAdd" Content="Add" Click="btnAdd_Click"></Button>
                     <StackPanel Width="30"></StackPanel>
-                    <Button x:Name="btUpdate" Content="Update"></Button>
+                    <Button x:Name="btnUpdate" Content="Update" Click="btnUpdate_Click"></Button>
                     <StackPanel Width="30"></StackPanel>
-                    <Button x:Name="btDelete" Content="Delete"></Button>
+                    <Button x:Name="btnDelete" Content="Delete" Click="btnDelete_Click"></Button>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
