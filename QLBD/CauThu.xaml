@@ -52,7 +52,7 @@
                     </Button>
                     <StackPanel Height="20"></StackPanel>
                     <DataGrid x:Name="dgPlayer" Height="283" Margin="0,0,-0.4,0" SelectionChanged="dgPlayer_SelectionChanged"
-                              SelectionMode="Single" SelectionUnit="FullRow">
+                              IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow">
                     </DataGrid>
                 </StackPanel>
                 <StackPanel Width="28"></StackPanel>

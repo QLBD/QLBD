@@ -63,13 +63,16 @@
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\ClubDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\MatchDAO.cs" />
     <Compile Include="DAO\PlayerDAO.cs" />
+    <Compile Include="DAO\RoundDAO.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Club.cs" />
     <Compile Include="DTO\Goal.cs" />
     <Compile Include="DTO\GoalType.cs" />
     <Compile Include="DTO\Match.cs" />
     <Compile Include="DTO\Player.cs" />
+    <Compile Include="DTO\Round.cs" />
     <Compile Include="ThayDoi.xaml.cs">
       <DependentUpon>ThayDoi.xaml</DependentUpon>
     </Compile>
